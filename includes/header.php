@@ -11,27 +11,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Link til Javascript -->
     <script src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../styles/header.css">
 </head>
 
 <body>
-    <div class="container-fluid fixed-bottom d-lg-none">
+    <div class="container-fluid fixed-bottom d-lg-none" id="head">
         <div class="row">
-            <div class="col">
+            <div class="col-2">
+                 
                 <!-- Style skal flyttes til CSS fil-->
+                <a href="*">
                 <i class="fas fa-home" style="font-size:3em; color:black;"></i>
-                <p>HOME</p>
+                <p class="text_hjem">Hjem</p>
+                </a>
+                
             </div>
-            <div class="col">
-               <i class="fas fa-search" style="font-size:3em; color:black;"></i>
+            
+            <div class="col-2">
+                <a href="*">
+                <i class="fas fa-search" style="font-size:3em; color:black;"></i>
+                <p>Søg</p>
+                </a>
             </div>
-            <div class="col">
+            <div class="col-4" id="upload">
+                <a href="*">
                 <i class="fas fa-plus-circle" style="font-size:3em; color:black;"></i>
+                <p>Upload</p>
+                </a>
             </div>
-            <div class="col">
+            <div class="col-2">
+                <a href="*">
                 <i class="far fa-comment-dots" style="font-size:3em; color:black;"></i>
+                <p>Beskeder</p>
+                </a>
             </div>
-            <div class="col">
-               <i class="fas fa-user" style="font-size:3em; color:black;"></i>
+            <div class="col-2">
+                <a href="*">
+                <i class="fas fa-user" style="font-size:3em; color:black;"></i>
+                <p>Profil</p>
+                </a>
             </div>
         </div>
     </div>
