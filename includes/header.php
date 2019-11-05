@@ -22,7 +22,7 @@
                 <p>HOME</p>
             </div>
             <div class="col">
-               <i class="fas fa-search" style="font-size:3em; color:black;"></i>
+                <i class="fas fa-search" style="font-size:3em; color:black;"></i>
             </div>
             <div class="col">
                 <i class="fas fa-plus-circle" style="font-size:3em; color:black;"></i>
@@ -31,7 +31,7 @@
                 <i class="far fa-comment-dots" style="font-size:3em; color:black;"></i>
             </div>
             <div class="col">
-               <i class="fas fa-user" style="font-size:3em; color:black;"></i>
+                <i class="fas fa-user" style="font-size:3em; color:black;"></i>
             </div>
         </div>
     </div>
