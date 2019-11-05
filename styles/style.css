@@ -9,3 +9,25 @@
 .purple-bitbyt {
     color: #302579;
 }
+.container_head{
+    background-color: lightblue;
+    padding-top: 5%;
+}
+.buttom_links{
+    text-align: center;
+}
+#upload{
+    text-align: center;
+}
+.bottum_icons{
+    font-size: 4em;
+    color: black;
+    text-align: center;
+}
+.icon_text{
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+
+}
+

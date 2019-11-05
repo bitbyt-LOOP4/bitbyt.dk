@@ -32,93 +32,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Link til Javascript -->
     <script src="../js/bootstrap.js"></script>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="../styles/header.css">
-</head>
-
-<body>
-    <div class="container-fluid fixed-bottom d-lg-none" id="head">
-=======
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-bitbyt fixed-top" id="topNav">
-        <div class="container">
-            <a class="navbar-brand js-scroll-trigger" href="index.php"><img src="../images/logo_transparent1.png" class="logo rounded">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link purple-bitbyt" href="faq.php">
-                            <p class="purple-bitbyt">Hvordan virker det?</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.php">
-                            Registrer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link purple-bitbyt" href="index.php">
-                            Login</a>
-                    </li>
-                </ul>
-            </a>
-        </div>
-    </nav>
-
-    <div class="container-fluid fixed-bottom d-lg-none">
->>>>>>> a83e3e4027c91f309df48c6bef6b4dbc34e6b347
+    <div class="container-fluid fixed-bottom d-lg-none container_head">
         <div class="row">
-            <div class="col-2">
-                 
+            <div class="col-2 bottum_links text-center">
+
                 <!-- Style skal flyttes til CSS fil-->
-<<<<<<< HEAD
-                <a href="*">
-                <i class="fas fa-home" style="font-size:3em; color:black;"></i>
-                <p class="text_hjem">Hjem</p>
+                <a class="icon_text" href="*">
+                    <i class="fas fa-home bottum_icons"></i>
+                Hjem
                 </a>
-                
+
             </div>
-            
-            <div class="col-2">
-                <a href="*">
-                <i class="fas fa-search" style="font-size:3em; color:black;"></i>
-                <p>Søg</p>
-                </a>
-=======
-                <i class="fas fa-home purple-bitbyt" style="font-size:3em;"></i>
-                <p>HOME</p>
-            </div>
-            <div class="col">
-                <i class="fas fa-search" style="font-size:3em; color:black;"></i>
->>>>>>> a83e3e4027c91f309df48c6bef6b4dbc34e6b347
-            </div>
-            <div class="col-4" id="upload">
-                <a href="*">
-                <i class="fas fa-plus-circle" style="font-size:3em; color:black;"></i>
-                <p>Upload</p>
+
+            <div class="col-2 bottum_links text-center">
+                <a class="icon_text" href="*">
+                    <i class="fas fa-search bottum_icons"></i>
+                    <p>Søg</p>
                 </a>
             </div>
-            <div class="col-2">
-                <a href="*">
-                <i class="far fa-comment-dots" style="font-size:3em; color:black;"></i>
-                <p>Beskeder</p>
+            <div class="col-4 bottum_links" id="upload">
+                <a class="icon_text" href="*">
+                    <i class="fas fa-plus-circle bottum_icons"></i>
+                    <p>Upload</p>
                 </a>
             </div>
-<<<<<<< HEAD
-            <div class="col-2">
-                <a href="*">
-                <i class="fas fa-user" style="font-size:3em; color:black;"></i>
-                <p>Profil</p>
+            <div class="col-2 bottum_links text-center">
+                <a class="icon_text" href="*">
+                    <i class="far fa-comment-dots bottum_icons"></i>
+                    <p>Beskeder</p>
                 </a>
-=======
-            <div class="col">
-                <i class="fas fa-user" style="font-size:3em; color:black;"></i>
->>>>>>> a83e3e4027c91f309df48c6bef6b4dbc34e6b347
+            </div>
+
+            <div class="col-2 bottum_links text-center">
+                <a class="icon_text" href="*">
+                    <i class="fas fa-user bottum_icons"></i>
+                    <p>Profil</p>
+                </a>
             </div>
         </div>
     </div>
-
-
-
 </body>
