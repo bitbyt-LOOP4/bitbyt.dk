@@ -39,7 +39,7 @@
 
 /* Styles the icons */
 .bottom_icons {
-    font-size: 4rem;
+    font-size: 1.5rem;
     color: black;
     text-align: center;
 }
@@ -48,6 +48,24 @@
 .icon_text {
     text-align: center;
     color: black;
-    font-size: 1.5rem;
+    font-size: 0.8rem;
 
+}
+
+.avatar {
+    border-radius: 50%;
+    border: solid black;
+}
+.minprofil_brugernavn{
+    text-align: center;
+    
+}
+.test1{
+    background-color: aqua;
+}
+.test2{
+    background-color: red;
+}
+.test3{
+    background-color: greenyellow;
 }
