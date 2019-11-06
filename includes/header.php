@@ -37,40 +37,39 @@
     </nav>
 
     <!-- Det her er til navigation på tablet og mobil -------------------------------------------------->
+    <!-- Oliver Bootstrap er benyttet til det meste af designet, dernæst overskrevet af CSS -->
     <div class="container-fluid fixed-bottom d-lg-none container_head">
         <div class="row">
-            <div class="col-2 bottum_links text-center">
-
-                <!-- Style skal flyttes til CSS fil-->
+            <div class="col-2 bottom_links text-center">
                 <a class="icon_text" href="*">
-                    <i class="fas fa-home bottum_icons"></i>
-                    Hjem
+                    <i class="fas fa-home bottom_icons"></i>
+                    <p>Hjem</p>
                 </a>
 
             </div>
 
-            <div class="col-2 bottum_links text-center">
+            <div class="col-2 bottom_links text-center">
                 <a class="icon_text" href="*">
-                    <i class="fas fa-search bottum_icons"></i>
+                    <i class="fas fa-search bottom_icons"></i>
                     <p>Søg</p>
                 </a>
             </div>
-            <div class="col-4 bottum_links" id="upload">
+            <div class="col-4 bottom_links" id="upload">
                 <a class="icon_text" href="*">
-                    <i class="fas fa-plus-circle bottum_icons"></i>
+                    <i class="fas fa-plus-circle bottom_icons"></i>
                     <p>Upload</p>
                 </a>
             </div>
-            <div class="col-2 bottum_links text-center">
+            <div class="col-2 bottom_links text-center">
                 <a class="icon_text" href="*">
-                    <i class="far fa-comment-dots bottum_icons"></i>
+                    <i class="far fa-comment-dots bottom_icons"></i>
                     <p>Beskeder</p>
                 </a>
             </div>
 
-            <div class="col-2 bottum_links text-center">
+            <div class="col-2 bottom_links text-center">
                 <a class="icon_text" href="*">
-                    <i class="fas fa-user bottum_icons"></i>
+                    <i class="fas fa-user bottom_icons"></i>
                     <p>Profil</p>
                 </a>
             </div>

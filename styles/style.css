@@ -21,29 +21,33 @@
     border-radius: 50px;
     background-color: #302579;
 }
-
+/* styles the most outer container in the navigation bar */
 .container_head {
-    background-color: lightblue;
+    background-color: #52d6d3;
     padding-top: 5%;
 }
 
-.buttom_links {
+/* this class styles the containers in the navigation bar */
+.bottom_links {
     text-align: center;
 }
 
+/* Upload ID was created cause it didnt work as a class */
 #upload {
     text-align: center;
 }
 
-.bottum_icons {
-    font-size: 4em;
+/* Styles the icons */
+.bottom_icons {
+    font-size: 4rem;
     color: black;
     text-align: center;
 }
 
+/* Styles the text under the icons */
 .icon_text {
     text-align: center;
     color: black;
-    font-size: 1.5em;
+    font-size: 1.5rem;
 
 }
