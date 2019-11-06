@@ -1,5 +1,5 @@
 .logo {
-    width: 6em;
+    width: 90px;
 }
 
 .bg-bitbyt {
@@ -7,27 +7,48 @@
 }
 
 .purple-bitbyt {
-    color: #302579;
+    color: #302579 !important;
 }
-.container_head{
+
+.navbar {
+    min-height: 80px;
+}
+
+nav .navbar-nav li a {
+    color: #302579 !important;
+}
+
+nav .navbar-nav li a:hover {
+    color: #604fc9 !important;
+}
+
+.btn-info {
+    color: white !important;
+    border-radius: 50px;
+}
+
+.container_head {
     background-color: lightblue;
     padding-top: 5%;
 }
-.buttom_links{
+
+.buttom_links {
     text-align: center;
 }
-#upload{
+
+#upload {
     text-align: center;
 }
-.bottum_icons{
+
+.bottum_icons {
     font-size: 4em;
     color: black;
     text-align: center;
 }
-.icon_text{
+
+.icon_text {
     text-align: center;
     color: black;
     font-size: 1.5em;
 
 }
-
