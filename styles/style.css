@@ -10,21 +10,16 @@
     color: #302579 !important;
 }
 
+
 .navbar {
     min-height: 80px;
 }
 
-nav .navbar-nav li a {
-    color: #302579 !important;
-}
 
-nav .navbar-nav li a:hover {
-    color: #604fc9 !important;
-}
-
-.btn-info {
-    color: white !important;
+.btn-registrer {
+    color: white;
     border-radius: 50px;
+    background-color: #302579;
 }
 
 .container_head {

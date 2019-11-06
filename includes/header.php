@@ -25,13 +25,13 @@
         <!-- Links -->
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Sådan virker det</a>
+                <a class="nav-link purple-bitbyt" href="#">Sådan virker det</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Log ind</a>
+                <a class="nav-link purple-bitbyt" href="#">Log ind</a>
             </li>
             <li class="nav-item">
-                <a href="#" class="btn btn-info" role="button">Registrer</a>
+                <a href="#" class="btn btn-info btn-registrer" role="button">Registrer</a>
             </li>
         </ul>
     </nav>
