@@ -16,8 +16,9 @@
 </head>
 
 <body>
-    <!-- Det her er til top navigationen på computeren -------------------------------------------------->
-    <nav class="navbar navbar-expand-sm bg-bitbyt d-none d-md-block">
+    <!--Jesper/ Det her er til top navigationen på computeren ------------------------------------------>
+    <div class=" d-none d-md-block">
+    <nav class="navbar navbar-expand-sm bg-bitbyt">
         <!-- Brand/logo -->
         <a class="navbar-brand" href="#">
             <img src="../images/logo_transparent1.png" alt="logo" class="logo">
@@ -36,14 +37,14 @@
             </li>
         </ul>
     </nav>
-
+    </div>
     <!-- Det her er til navigation på tablet og mobil -------------------------------------------------->
     <!-- Oliver Bootstrap er benyttet til det meste af designet, dernæst overskrevet af CSS -->
-    <div class="container-fluid fixed-bottom d-lg-none container_head">
+    <div class="container-fluid fixed-bottom d-md-none container_head">
         <div class="row">
             <div class="col-2 bottom_links text-center">
                 <a class="icon_text" href="*">
-                    <i class="fas fa-home bottom_icons"></i>
+                    <i class="fas fa-home bottom_icons"></i><br>
                     Hjem
                 </a>
 
@@ -51,7 +52,7 @@
 
             <div class="col-2 bottom_links text-center">
                 <a class="icon_text" href="*">
-                    <i class="fas fa-search bottom_icons"></i>
+                    <i class="fas fa-search bottom_icons"></i><br>
                     Søg
                 </a>
             </div>
@@ -61,16 +62,16 @@
                     Upload
                 </a>
             </div>
-            <div class="col-2">
-                <a class="icon_text btn btn-default btn-lg text-center" role="button" href="#">
-                    <span class="fas fa-comment-dots bottom_icons"></span> <br>
+            <div class="col-2 bottom_links text-center">
+                <a class="icon_text" href="*">
+                    <i class="fas fa-comment-dots bottom_icons"></i><br>
                     Beskeder
                 </a>
             </div>
 
             <div class="col-2 bottom_links text-center">
                 <a class="icon_text" href="*">
-                    <i class="fas fa-user bottom_icons"></i>
+                    <i class="fas fa-user bottom_icons"></i><br>
                     Profil
                 </a>
             </div>

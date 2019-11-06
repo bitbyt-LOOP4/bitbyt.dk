@@ -24,7 +24,8 @@
 /* styles the most outer container in the navigation bar */
 .container_head {
     background-color: #52d6d3;
-    padding-top: 5%;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
 }
 
 /* this class styles the containers in the navigation bar */
@@ -39,17 +40,17 @@
 
 /* Styles the icons */
 .bottom_icons {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: black;
     text-align: center;
 }
+
 
 /* Styles the text under the icons */
 .icon_text {
     text-align: center;
     color: black;
-    font-size: 0.8rem;
-
+    font-size: 0.7rem;
 }
 
 .avatar {
@@ -60,6 +61,7 @@
     text-align: center;
     
 }
+
 .test1{
     background-color: aqua;
 }
