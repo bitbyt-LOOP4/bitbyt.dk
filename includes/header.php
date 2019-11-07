@@ -22,7 +22,7 @@
         <nav class="navbar navbar-expand-sm bg-bitbyt">
             <!-- Brand/logo -->
             <a class="navbar-brand" href="#">
-                <img src="../images/logo_transparent1.png" alt="logo" class="logo">
+                <img src="./images/logo_transparent1.png" alt="logo" class="logo">
             </a>
 
             <!-- Links -->
