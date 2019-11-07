@@ -62,18 +62,12 @@
     font-weight: bold;
     
 }
-<<<<<<< HEAD
 .under_profil{
     font-size: 1.3rem;
     font-weight: bold;
     border-left: solid grey;
     border-right: solid grey; 
-=======
-
-.test1{
-    background-color: aqua;
->>>>>>> 714cafd46ce04682c7e01fb711ec8ebe8d34df4d
-}
+    }
 .profil_variabler{
     font-size: 1.3rem;
     font-weight: bold;

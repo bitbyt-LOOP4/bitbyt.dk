@@ -22,20 +22,20 @@
     
 <div class="container-fluid">
   <div class="row">
-      <div class="col-2 profil_container"></div>
-    <div class="col-8 profil_container">
+      <div class="col-3 profil_container"></div>
+    <div class="col-6 profil_container">
         <div class="text-center">
         <img class="avatar" src="images/avatar.PNG">
     <!-- Brugernavn hentes via PHP -->
         <p class="profil_brugernavn">"brugernavn"</p>
         </div>
       </div>
-      <div class="col-2 profil_container">
+      <div class="col-3 profil_container">
           <div class="list-group text-right">
   
-  <a href="#" class="list-group-item list-group-item-action">Indstillinger</a>
-  <a href="#" class="list-group-item list-group-item-action">Mine Hubs</a>
-  <a href="#" class="list-group-item list-group-item-action">Historik</a>
+  <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-cogs"></i> Indstillinger</a>
+  <a href="#" class="list-group-item list-group-item-action"><i class="fab fa-hubspot"></i> Mine Hubs</a>
+  <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-history"></i> Historik</a>
 
 </div>
           
