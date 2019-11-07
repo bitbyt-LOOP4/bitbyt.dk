@@ -3,12 +3,15 @@
 require_once('conn.php');
     
 /*husk at fjerne parrentes og tuborgklamme efter toytitle */
-     if (isset($_POST['product_name'])) {
+     if (isset($_POST['product_name']) && isset($_POST['price']) && isset($_POST['description'])) {
+         
+         
     $product_name = get_post($con, 'product_name');
-    
+    $description = get_post($con, 'description');
+    $price = get_post($con, 'price');
 
          
-         $query ="INSERT INTO product(product_name) VALUES('$product_name')";
+         $query ="INSERT INTO product(product_name, description, price, timestamp) VALUES('$product_name', '$description', '$price', NOW())" ;
              $result = mysqli_query($con, $query);
          if(!$result) die(mysqli_error($con));
          else {
@@ -54,10 +57,19 @@ require_once('conn.php');
 					<input type="text" class="form-control" id="validationCustom01" placeholder="eks. lego super heros" name="product_name" required>
 					
 				</div>
-                <div>
+              
+                <div class="col-md-6 mb-4">
+					<label for="validationCustom01">beskrivelse</label>
+					<input type="text" class="form-control" id="validationCustom02" placeholder="eks. superhelte i god stand.." name="description" required>
+					
+				</div>
                 
+                <div class="col-md-6 mb-4">
+					<label for="validationCustom01">Pris</label>
+					<input type="text" class="form-control" id="validationCustom02" placeholder="100" name="price" required>
+					
+				</div>
                 
-                </div>
                 
                 <br> 
             
