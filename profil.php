@@ -10,7 +10,7 @@
     <!-- Link til jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Link til Javascript -->
-    <script src="../js/bootstrap.js"></script>
+    <script src="js/bootstrap.js"></script>
     <link rel="stylesheet" href="styles/style.css">
 </head>
     <!-- DETTE SKAL INCLUDES MED PHP PÅ ET TIDSPUNKT, OG DERFOR SKAL DET SLETTES INDEN -->
@@ -32,10 +32,21 @@
       </div>
       <div class="col-3 profil_container">
           <div class="list-group text-right">
-  
-  <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-cogs"></i> Indstillinger</a>
-  <a href="#" class="list-group-item list-group-item-action"><i class="fab fa-hubspot"></i> Mine Hubs</a>
-  <a href="#" class="list-group-item list-group-item-action"><i class="fas fa-history"></i> Historik</a>
+              
+  <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle"
+          type="button" id="dropdownMenu1" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+    <i class="fas fa-cogs"></i> Indstillinger
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <a class="dropdown-item" href="#!"><i class="fab fa-hubspot"></i> Mine Hubs</a>
+    <a class="dropdown-item" href="#!">Skift Avatar</a>
+    <a class="dropdown-item" href="#!"><i class="fas fa-history"></i> Historik</a>
+  </div>
+</div>
+              
+
 
 </div>
           
