@@ -52,20 +52,26 @@
 
 }
 
-.avatar {
-    border-radius: 50%;
+.avatar{
+    border-radius: 90%;
     border: solid black;
 }
-.minprofil_brugernavn{
-    text-align: center;
+.profil_brugernavn{
+    font-size: 1.5rem;
+    font-weight: bold;
     
 }
-.test1{
-    background-color: aqua;
+.under_profil{
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-left: solid grey;
+    border-right: solid grey; 
 }
-.test2{
-    background-color: red;
+.profil_variabler{
+    font-size: 1.3rem;
+    font-weight: bold;
+    
 }
-.test3{
-    background-color: greenyellow;
+.profil_container{
+    padding-top: 2%;
 }
