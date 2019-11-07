@@ -1,1 +1,78 @@
+.logo {
+    width: 90px;
+}
 
+.bg-bitbyt {
+    background-color: #52d6d3;
+}
+
+.purple-bitbyt {
+    color: #302579 !important;
+}
+
+
+.navbar {
+    min-height: 80px;
+}
+
+
+.btn-registrer {
+    color: white;
+    border-radius: 50px;
+    background-color: #302579;
+}
+/* styles the most outer container in the navigation bar */
+.container_head {
+    background-color: #52d6d3;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+/* this class styles the containers in the navigation bar */
+.bottom_links {
+    text-align: center;
+}
+
+/* Upload ID was created cause it didnt work as a class */
+#upload {
+    text-align: center;
+}
+
+/* Styles the icons */
+.bottom_icons {
+    font-size: 1.6rem;
+    color: black;
+    text-align: center;
+}
+
+
+/* Styles the text under the icons */
+.icon_text {
+    text-align: center;
+    color: black;
+    font-size: 0.7rem;
+}
+
+.avatar{
+    border-radius: 90%;
+    border: solid black;
+}
+.profil_brugernavn{
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+.under_profil{
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-left: solid grey;
+    border-right: solid grey; 
+    }
+.profil_variabler{
+    font-size: 1.3rem;
+    font-weight: bold;
+    
+}
+.profil_container{
+    padding-top: 2%;
+}
