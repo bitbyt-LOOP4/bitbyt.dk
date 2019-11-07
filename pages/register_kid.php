@@ -91,10 +91,11 @@ require_once('../conn.php');
 						</div>
 					</div>
 				</div>
-			
+			<!--knappen fungere ikke-->
 			<button class="btn btn-primary" type="next">Næste</button>
-            <div class="invalid-feedback"> Tryk "næste" for forældre registrering. </div>
-            <botton onclick="window.location.href='/register_parrent.php'"></botton>
+        <button onclick="window.location.href='/register_parrent.php'"></button>    
+        <div class="invalid-feedback"> Tryk "næste" for forældre registrering. </div>
+            
 		</form>
 		<br><br>    
     
