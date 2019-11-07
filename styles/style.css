@@ -6,6 +6,10 @@
     background-color: #52d6d3;
 }
 
+.bg-bitbyt-secondary {
+    background-color: #302579;
+}
+
 .purple-bitbyt {
     color: #302579 !important;
 }
@@ -15,12 +19,17 @@
     min-height: 80px;
 }
 
+.btn-submit {
+    background-color: #302579;
+    border-color: black;
+}
 
 .btn-registrer {
     color: white;
     border-radius: 50px;
     background-color: #302579;
 }
+
 /* styles the most outer container in the navigation bar */
 .container_head {
     background-color: #52d6d3;
@@ -53,26 +62,30 @@
     font-size: 0.7rem;
 }
 
-.avatar{
+.avatar {
     border-radius: 90%;
     border: solid black;
 }
-.profil_brugernavn{
+
+.profil_brugernavn {
     font-size: 1.5rem;
     font-weight: bold;
-    
+
 }
-.under_profil{
+
+.under_profil {
     font-size: 1.3rem;
     font-weight: bold;
     border-left: solid grey;
-    border-right: solid grey; 
-    }
-.profil_variabler{
+    border-right: solid grey;
+}
+
+.profil_variabler {
     font-size: 1.3rem;
     font-weight: bold;
-    
+
 }
-.profil_container{
+
+.profil_container {
     padding-top: 2%;
 }
