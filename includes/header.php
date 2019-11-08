@@ -9,7 +9,7 @@
         <?php echo $page;?>
     </title>
     <!-- Bootstrap CSS -------------------------------------------------->
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <!-- Kilde til icon biblotek fra bootstrap 4 ------------------------>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- Custom CSS ----------------------------------------------------->
@@ -22,7 +22,7 @@
         <nav class="navbar navbar-expand-sm bg-bitbyt">
             <!-- Brand/logo -->
             <a class="navbar-brand" href="#">
-                <img src="../images/logo_transparent1.png" alt="logo" class="logo">
+                <img src="images/logo_transparent1.png" alt="logo" class="logo">
             </a>
 
             <!-- Links -->
@@ -78,3 +78,5 @@
             </div>
         </div>
     </div>
+    
+   
