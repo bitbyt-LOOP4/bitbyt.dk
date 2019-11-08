@@ -41,12 +41,13 @@ require_once('includes/header.php');
     <br>
     <!-- variabler skal hentes med PHP-->
     <div class="row text-center">
+        <div class="col-1"></div>
         <div class="col-3">
             <span class="profil_variabler">2</span>
             <br>
             <span class="under_profil">Hubs</span>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <span class="profil_variabler">6</span>
             <br>
             <span class="under_profil">Byttehandler</span>
@@ -56,6 +57,7 @@ require_once('includes/header.php');
             <br>
             <span class="under_profil">Opslag</span>
         </div>
+        <div class="col-1"></div>
     
     </div>
     </div>

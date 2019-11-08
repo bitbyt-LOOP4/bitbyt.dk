@@ -68,10 +68,9 @@
     
 }
 .under_profil{
-    font-size: 1.3rem;
+    font-size: 0.9rem;
     font-weight: bold;
-    border-left: solid grey;
-    border-right: solid grey; 
+    color: lightgrey;
     }
 .profil_variabler{
     font-size: 1.3rem;
