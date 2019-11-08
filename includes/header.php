@@ -5,14 +5,14 @@
     <meta charset="utf-8">
     <meta name="author" content="bitbyt.dk">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <!-- Kilde til icon biblotek fra bootstrap 4 -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- Link til jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Link til Javascript -->
-    <script src="../js/bootstrap.js"></script>
-    <link rel="stylesheet" href="../styles/style.css">
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <nav class="navbar navbar-expand-sm bg-bitbyt">
         <!-- Brand/logo -->
         <a class="navbar-brand" href="#">
-            <img src="../images/logo_transparent1.png" alt="logo" class="logo">
+            <img src="images/logo_transparent1.png" alt="logo" class="logo">
         </a>
 
         <!-- Links -->
@@ -70,7 +70,7 @@
             </div>
 
             <div class="col-2 bottom_links text-center">
-                <a class="icon_text" href="*">
+                <a class="icon_text" href="profil.php">
                     <i class="fas fa-user bottom_icons"></i><br>
                     Profil
                 </a>
