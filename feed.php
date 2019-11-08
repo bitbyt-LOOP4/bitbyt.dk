@@ -1,5 +1,9 @@
 <?php
-include_once '../includes/header.php';
+include_once './includes/header.php';
+
+$con = mysqli_connect("localhost", "root", "Mikkelsen", "bitbyt");
+
+
 ?>
 
     <!-- container der indeholder artikler -->
@@ -7,15 +11,48 @@ include_once '../includes/header.php';
         <div class="row">
             <!-- LOOP der genere artikler -->
             <?php
-            function getArticle() {
-        for ($x = 1; $x <= 30; $x++) {    
+         
+            
+            
+              $query = "SELECT * FROM `product` ORDER BY RAND() LIMIT 30";
+	$result = mysqli_query($con, $query);
+	if (!$result) die(mysqli_error($con));
+	else ($rows = mysqli_num_rows($result));
+
+            
+            
+            
+            
+           	 if ($rows > 0) { 
+		while($row = mysqli_fetch_array($result)) {
+			$product_name = $row['product_name'];
+			$description = $row['description'];
+			$image_link = $row['image_link'];
+			$price = $row['price'];
+           /* echo "<br>";
+			echo "NAVN:";
+            echo $product_name;
+            echo "<br>";
+            echo "BESKRIVELSE:";
+            echo $description;
+            echo "<br>";
+            echo "BILLEDE LINK:";
+            echo $image_link;
+            echo "<br>";
+            echo "PRIS:";
+            echo $price; */
             echo '<div class="col-md-4 col-lg-3">';
             echo '<div class="card mb-4 shadow-sm">';
-            echo "<h4>Lejetøj $x </h4>";
+            
+            echo "<h4> $product_name </h4>";
 
-            echo '<img src="../images/lego.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Lego">';
+            echo '<img src="';
+            echo "$image_link";
+            echo ' "class="bd-placeholder-img card-img-top" width="100%" height="225" alt="test">';
             echo '<div class="card-body">';
-            echo '<p class="card-text">#LEGO #Blandet #Farver #Kreativ</p>';
+            echo '<p class="card-text">';
+            echo "$description"; 
+            echo '</p>';
             echo '<div class="d-flex justify-content-between align-items-center">';
             echo '<div class="btn-group">';
             echo '<button type="button" class="btn btn-sm btn-outline-secondary " data-toggle="modal" data-target="#myModal">Se vare</button>';
@@ -25,9 +62,10 @@ include_once '../includes/header.php';
             echo '</div>';
             echo '</div>';
             echo '</div>';
+            
         }
-        }
-        getArticle();
+    } 
+
     ?>
 
 
@@ -48,7 +86,7 @@ include_once '../includes/header.php';
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-          <img src="../images/lego.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Lego">
+          <img src="./images/lego.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Lego">
         <p>#LEGO #Blandet #Farver #Kreativ</p>
       </div>
       <div class="modal-footer">
