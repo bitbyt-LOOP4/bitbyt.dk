@@ -21,6 +21,10 @@
     background-color: #302579;
 }
 
+.btn-registrer:hover{
+    background-color: black;
+}
+
 
 /* styles the most outer container in the navigation bar */
 .container_head {
