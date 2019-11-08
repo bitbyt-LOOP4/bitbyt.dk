@@ -10,7 +10,6 @@
     color: #302579 !important;
 }
 
-
 .navbar {
     min-height: 80px;
 }
@@ -74,5 +73,8 @@
     
 }
 .profil_container{
-    padding-top: 2%;
+    padding-top: 10%;
+}
+.dropdown_items{
+    border-bottom: solid black;
 }
