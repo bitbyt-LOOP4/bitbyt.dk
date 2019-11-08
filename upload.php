@@ -41,7 +41,7 @@ if (isset($_POST['image_name']) && isset($_FILES['image'])) {
 			//Checks if the file was moved and gives the user a message about it
 			if ($did_upload) {
 				$filename = basename($upload_path); //extracts the new filename
-				$image_path = "." . $upload_directory . $filename; //creates the path to be added to the database
+				$image_path = "" . $upload_directory . $filename; //creates the path to be added to the database
 				
 				//if the file moving failed gives an error (this error normally means that the folder doesn't have Read/Write permissions)
             } else {
