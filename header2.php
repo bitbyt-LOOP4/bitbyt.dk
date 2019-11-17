@@ -13,7 +13,6 @@
     </title>
     <!-- Bootstrap CSS -------------------------------------------------->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" href="styles/style.css">
     <!-- Kilde til icon biblotek fra bootstrap 4 ------------------------>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <!-- Google fonts ----->
@@ -22,11 +21,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- Link til Javascript -->
     <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
     <!--Jesper/ Det her er til top navigationen på computeren ------------------------------------------>
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-bitbyt">
+    <nav class="navbar navbar-expand-lg navbar-light bg-bitbyt">
         <div class="d-flex flex-grow-1">
             <span class="w-100 d-lg-none d-block">
                 <!-- Centrerer logo på mobil --></span>
