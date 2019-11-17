@@ -133,3 +133,22 @@ h6 {
 .profil_container {
     padding-top: 10%;
 }
+
+.icon-footer {
+    color: white !important;
+    /* Fix til forskellige browsers */
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.icon-footer :hover {
+    color: black;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}

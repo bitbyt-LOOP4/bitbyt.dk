@@ -1,27 +1,22 @@
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 <footer>
- <div class=" d-none d-md-block">
-        <nav class="navbar navbar-expand-sm bg-bitbyt">
-        
-            <div class="col-2">
+    <div class=" d-none d-md-block">
+        <nav class="navbar navbar-expand-sm bg-bitbyt-purple">
+
+            <div class="col-3 text-light">
                 &copy; Bitbyt.dk
             </div>
-            <div class="col-8 text-center">
-              <a class="ins-ic">
-            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>  
-            <a class="fb-ic">
-            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
+            <div class="col-6 text-center icon-footer">
+                <a class="ins-ic" href="http://instagram.com/bitbyt">
+                    <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x text-light"> </i>
+                </a>
+                <a class="fb-ic" href="http://www.facebook.com/bitbyt">
+                    <i class="fab fa-facebook-f fa-lg text-light mr-md-5 mr-3 fa-2x"> </i>
+                </a>
             </div>
-            <div class="col-2">
-                <a class="purple-bitbyt" href="*">Om os</a>
+            <div class="col-3 text-right text-light">
+                <a class="text-light" href="*">Om os</a>
                 <br>
-                <a class="purple-bitbyt" href="*">Kontakt</a>
+                <a class="text-light" href="*">Kontakt</a>
             </div>
         </nav>
     </div>
@@ -29,4 +24,3 @@
 </body>
 
 </html>
-
