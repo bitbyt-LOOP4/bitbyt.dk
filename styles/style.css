@@ -20,6 +20,14 @@ h6 {
     background-color: #52d6d3;
 }
 
+
+.bg-bitbyt-secondary {
+    background-color: #302579;
+}
+
+.purple-bitbyt {
+    color: #302579 !important;
+
 .bg-bitbyt-purple {
     background-color: #302579;
 }
@@ -31,6 +39,11 @@ h6 {
 .navbar {
     min-height: 80px;
     font-family: 'Roboto Mono', monospace;
+}
+
+.btn-submit {
+    background-color: #302579;
+    border-color: black;
 }
 
 .btn-registrer {
@@ -57,7 +70,6 @@ h6 {
 .btn-purple:active {
     background-color: #271e62;
 }
-
 
 /* styles the most outer container in the navigation bar */
 .container_head {
@@ -103,9 +115,8 @@ h6 {
 .profil_brugernavn {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-top: 16px;
-}
-
+ }
+  
 .under_profil {
     font-size: 0.8rem;
     font-weight: bold;
