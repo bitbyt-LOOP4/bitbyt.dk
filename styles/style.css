@@ -154,10 +154,19 @@ h6 {
     transition: .5s;
 }
 
-.about_header{
+.about_header {
     text-decoration-line: underline solid white;
 }
-.about_jumbo{
+
+.about_jumbo {
     text-align: right;
 }
 
+.navbar-default {
+    transition: 500ms ease;
+    background-color: #52d6d3;
+}
+
+.navbar-default.scrolled {
+    background: white;
+}

@@ -25,9 +25,24 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap" rel="stylesheet">
 </head>
 
+<script type="text/javascript">
+    //<![CDATA[
+
+    window.onload = function() {
+
+        $(window).scroll(function() {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+        });
+
+    }
+
+    //]]>
+
+</script>
+
 <body>
     <!--Jesper/ Det her er til top navigationen på computeren ------------------------------------------>
-    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-bitbyt">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-bitbyt navbar-default">
         <div class="d-flex flex-grow-1">
             <span class="w-100 d-lg-none d-block">
                 <!-- Centrerer logo på mobil --></span>
