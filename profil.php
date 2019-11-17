@@ -10,11 +10,11 @@ require_once('includes/header.php');
         <div class="col-2 profil_container"></div>
         <div class="col-8 profil_container">
             <div class="text-center">
-                <!-- Midlertidig løsning til Avatar. Endelige avatars skal være copyright frie -->
+                <!-- Midlertidig løsning til Avatar. Endelige avatars skal være designet selv med mulighed for at vælge i mellem -->
                 <img class="avatar" src="images/ninja.svg">
                 <!-- Icons made by Freepik from www.flaticon.com -->
                 <!-- Brugernavn hentes via PHP -->
-                <p class="profil_brugernavn">"Brugernavn"</p>
+                <h2 class="profil_brugernavn">"Brugernavn"</h2>
 
                 <div class="list-group text-right">
 
@@ -59,9 +59,15 @@ require_once('includes/header.php');
 
     </div>
 </div>
-<br>
+<br><br>
 <!-- container der indeholder artikler -->
+
+
 <div class="container">
+    <div class="container-fluid text-center">
+        <h3>Mine varer</h3>
+    </div>
+    <br>
     <div class="row">
         <!-- LOOP der genere artikler -->
         <?php
@@ -91,9 +97,9 @@ require_once('includes/header.php');
 
 
     </div>
-    <button type="submit" class=" align-self-end btn btn-primary btn-block" onClick="window.location.reload();">Indlæs flere..</button>
+    <button type="submit" class=" align-self-end btn btn-primary btn-block btn-purple" onClick="window.location.reload();">Indlæs flere..</button>
 </div>
-
+<br>
 
 <!-- Modal -->
 <div id="myModal" class="modal fade" role="dialog">

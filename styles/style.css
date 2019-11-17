@@ -1,3 +1,17 @@
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Mono', monospace;
+}
+
 .logo {
     width: 90px;
 }
@@ -6,23 +20,42 @@
     background-color: #52d6d3;
 }
 
-.purple-bitbyt {
+.bg-bitbyt-purple {
+    background-color: #302579;
+}
+
+.h .purple-bitbyt {
     color: #302579 !important;
 }
 
 .navbar {
     min-height: 80px;
+    font-family: 'Roboto Mono', monospace;
 }
-
 
 .btn-registrer {
-    color: white;
+    color: antiquewhite !important;
     border-radius: 50px;
     background-color: #302579;
+    border-color: black;
+    padding-left: 0.9em !important;
+    padding-right: 0.9em !important;
 }
 
-.btn-registrer:hover {
-    background-color: black;
+.btn-registrer:hover,
+.btn-registrer:active {
+    background-color: #271e62;
+}
+
+.btn-purple {
+    color: white;
+    background-color: #302579;
+    border-color: black;
+}
+
+.btn-purple:hover,
+.btn-purple:active {
+    background-color: #271e62;
 }
 
 
@@ -48,14 +81,18 @@
     font-size: 1.6rem;
     color: black;
     text-align: center;
+    font-family: 'Roboto Mono', monospace;
 }
-
 
 /* Styles the text under the icons */
 .icon_text {
     text-align: center;
     color: black;
     font-size: 0.7rem;
+}
+
+.navbar-toggler {
+    margin-top: 0.9rem;
 }
 
 .avatar {
