@@ -21,7 +21,7 @@
     background-color: #302579;
 }
 
-.btn-registrer:hover{
+.btn-registrer:hover {
     background-color: black;
 }
 
@@ -58,28 +58,29 @@
     font-size: 0.7rem;
 }
 
-.avatar{
+.avatar {
     border-radius: 90%;
-    border: solid black;
+    width: 14rem;
 }
-.profil_brugernavn{
+
+.profil_brugernavn {
     font-size: 1.5rem;
     font-weight: bold;
-    
+    margin-top: 16px;
 }
-.under_profil{
-    font-size: 0.9rem;
+
+.under_profil {
+    font-size: 0.8rem;
     font-weight: bold;
     color: lightgrey;
-    }
-.profil_variabler{
+}
+
+.profil_variabler {
     font-size: 1.3rem;
     font-weight: bold;
-    
+
 }
-.profil_container{
+
+.profil_container {
     padding-top: 10%;
-}
-.dropdown_items{
-    border-bottom: solid black;
 }
