@@ -19,7 +19,7 @@
           </a>
             </div>
             <div class="col-2">
-                <a class="purple-bitbyt" href="*">Om os</a>
+                <a class="purple-bitbyt" href="om_os.php">Om os</a>
                 <br>
                 <a class="purple-bitbyt" href="*">Kontakt</a>
             </div>

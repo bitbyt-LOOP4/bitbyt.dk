@@ -133,3 +133,10 @@ h6 {
 .profil_container {
     padding-top: 10%;
 }
+
+.about_header{
+    text-decoration-line: underline solid white;
+}
+.about_jumbo{
+    text-align: right;
+}
