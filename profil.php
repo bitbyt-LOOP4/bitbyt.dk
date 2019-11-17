@@ -14,7 +14,7 @@ require_once('includes/header.php');
                 <img class="avatar" src="images/ninja.svg">
                 <!-- Icons made by Freepik from www.flaticon.com -->
                 <!-- Brugernavn hentes via PHP -->
-                <h2 class="profil_brugernavn">"Brugernavn"</h2>
+                <h2 class="profil_brugernavn mt-3">"Brugernavn"</h2>
 
                 <div class="list-group text-right">
 
