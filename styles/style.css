@@ -134,6 +134,7 @@ h6 {
     padding-top: 10%;
 }
 
+
 .icon-footer {
     color: white !important;
     /* Fix til forskellige browsers */
@@ -152,3 +153,11 @@ h6 {
     -webkit-transition: .5s;
     transition: .5s;
 }
+
+.about_header{
+    text-decoration-line: underline solid white;
+}
+.about_jumbo{
+    text-align: right;
+}
+
