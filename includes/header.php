@@ -67,7 +67,7 @@ require_once('conn.php');
         <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
             <ul class="navbar-nav ml-auto flex-nowrap">
                 <li class="nav-item">
-                    <a href="*" class="nav-link m-2 menu-item nav-active">Sådan virker det</a>
+                    <a href="faq.php" class="nav-link m-2 menu-item nav-active">Sådan virker det</a>
                 </li>
                 <li class="nav-item">
                     <a href="./login.php" class="nav-link m-2 menu-item">Log ind</a>

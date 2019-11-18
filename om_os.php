@@ -4,7 +4,7 @@ require_once('includes/header.php');
 ?>
 
 
-<div class="jumbotron jumbotron-fluid bg-bitbyt mb-0 mt-1">
+<div class="jumbotron jumbotron-fluid bg-bitbyt mb-0 mt-0">
     <div class="container">
         <h1 class="display-4 mb-10 about_header">Team Bitbyt</h1>
         <hr>

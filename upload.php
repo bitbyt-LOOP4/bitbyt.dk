@@ -95,7 +95,7 @@ if (isset($_POST['image_name']) && isset($_FILES['image'])) {
 		<div class="container">
 			<div class="logo"><img src="images/logo.svg" width="100" alt="Upload!"></div>
 			<div class="row">
-				<h1 class="title-form">Share your image!</h1> </div>
+				<h3 class="title-form">Upload et billede af dit legetøj</h3> </div>
 			<!-- Forms that are used to process files require the enctype="multipart/form-data" attribute to be able to process the files -->
 			<form action="upload.php" method="post" enctype="multipart/form-data" class="form form-upload">
 				<input type="file" name="image" class="choose-file">

@@ -20,6 +20,9 @@ h6 {
     background-color: #52d6d3;
 }
 
+.bg-footer {
+    background-color: #2cbab8;
+}
 
 .bg-bitbyt-secondary {
     background-color: #302579;
@@ -177,4 +180,18 @@ h6 {
 
 .icon-color {
     color: #302579 !important;
+}
+
+.icon_index{
+    width: 14rem;
+    border-color: none;
+}
+
+.arrow{
+    width: 2rem;
+    border-color: none;
+}
+.faq_box{
+    background-color: whitesmoke;
+    border-radius: 20%;
 }

@@ -7,26 +7,17 @@ require_once('includes/header.php');
 require_once('conn.php');
     
 /*husk at fjerne parrentes og tuborgklamme efter toytitle */
-     if (isset($_POST['product_name']) && isset($_POST['price']) && isset($_POST['description']) && isset($_POST['category_name']) && isset($_POST['product_condition'])) {
+     if (isset($_POST['product_name']) && isset($_POST['price']) && isset($_POST['description'])) {
          
          
     $product_name = get_post($con, 'product_name');
     $description = get_post($con, 'description');
     $price = get_post($con, 'price');
-    $category_name = get_post($con, 'category_name');
-    $product_condition = get_post($con, 'product_condition');
+   
 
          
          
-          $q_con ="INSERT INTO product_con(product_condition) VALUES('$product_condition')" ;
-             $r_con = mysqli_query($con, $q_con);
-         if(!$r_con) die(mysqli_error($con));
-
-         
-          $q_cat ="INSERT INTO product_cat(category_name) VALUES('$category_name')";
-             $r_cat = mysqli_query($con, $q_cat);
-         if(!$r_cat) die(mysqli_error($con));
-         
+       
          
          
          $q_prod ="INSERT INTO product(product_name, description, price, timestamp) VALUES('$product_name', '$description', '$price', NOW())" ;
@@ -46,6 +37,16 @@ require_once('conn.php');
 
 
 
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
     <header class="toy_registration">
         <div class="container_registraion text-center">
             <div class="box-registration">
