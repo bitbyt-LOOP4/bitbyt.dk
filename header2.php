@@ -48,20 +48,24 @@
             </div>
             <ul class="nav navbar-right">
                 <li>
-                    <a href="*" class="nav-link m-2 icon_text"><i class="fas fa-home bottom_icons icon-color"></i><br>
+                    <a href="index.php" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-home bottom_icons icon-color"></i><br>
                         Hjem</a>
                 </li>
                 <li>
-                    <a href="*" class="nav-link m-2 icon_text"><i class="fas fa-search bottom_icons icon-color"></i><br>
+                    <a href="*" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-search bottom_icons icon-color"></i><br>
                         Søg</a>
                 </li>
                 <li>
-                    <a href="*" class="nav-link m-2 icon_text"><i class="fas fa-comment-dots bottom_icons icon-color"></i><br>
+                    <a href="*" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-comment-dots bottom_icons icon-color"></i><br>
                         Beskeder</a>
                 </li>
                 <li>
-                    <a href="*" class="nav-link m-2 icon_text"><i class="fas fa-user bottom_icons icon-color"></i><br>
+                    <a href="profil.php" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-user bottom_icons icon-color"></i><br>
                         Profil</a>
+                </li>
+                <li>
+                    <a href="logout.php" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-sign-out-alt bottom_icons icon-color"></i><br>
+                        Log ud</a>
                 </li>
             </ul>
         </div>
