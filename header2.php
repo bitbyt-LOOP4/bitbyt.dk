@@ -56,7 +56,7 @@
                         Søg</a>
                 </li>
                 <li>
-                    <a href="*" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-comment-dots bottom_icons icon-color"></i><br>
+                    <a href="" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-comment-dots bottom_icons icon-color"></i><br>
                         Beskeder</a>
                 </li>
                 <li>
