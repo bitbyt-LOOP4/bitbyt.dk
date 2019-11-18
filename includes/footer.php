@@ -1,6 +1,6 @@
 <footer>
     <div class=" d-none d-md-block">
-        <nav class="navbar navbar-expand-sm bg-bitbyt-purple navbar-fixed-bottom">
+        <nav class="navbar navbar-expand-sm bg-footer fixed-bottom">
 
             <div class="col-3 text-light">
                 &copy; Bitbyt.dk
