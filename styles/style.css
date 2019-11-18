@@ -179,3 +179,7 @@ h6 {
     width: 2rem;
     border-color: none;
 }
+.faq_box{
+    background-color: whitesmoke;
+    border-radius: 20%;
+}
