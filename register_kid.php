@@ -1,9 +1,16 @@
 <?php
+$page = 'Oprettelse af profil';
+
+require_once('includes/header.php');
+
+
+?>
+<?php
 
 //*$page = "kid Registration: bitbyt";
 
 session_start();
-require_once('../conn.php');
+require_once('conn.php');
     
 
      if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['age'])){
@@ -33,16 +40,6 @@ require_once('../conn.php');
 
 
 ?>
-
-<!DOCTYPE html>
-<html lang="da">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-
-<body>
     <header class="kid_registration">
         <div class="container_registraion text-center">
             <div class="box-registration">
@@ -100,11 +97,10 @@ require_once('../conn.php');
 		<br><br>    
     
     </fieldset>
-</body>
-</html>
 	<?php
 
 function get_post($con, $var) {
 	return mysqli_real_escape_string($con, $_POST[$var]);
 }
+require_once('includes/footer.php')
 ?>
