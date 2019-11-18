@@ -5,7 +5,7 @@ require_once('includes/header.php');
 
 
 <div class="jumbotron jumbotron-fluid bg-bitbyt mb-0 mt-0">
-    
+
     <!-- Nr 1. -->
     <div class="container">
         <h1 class="display-4 mb-10 about_header text-center">Så nemt er det!</h1>

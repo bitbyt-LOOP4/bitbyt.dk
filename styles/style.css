@@ -12,6 +12,22 @@ h6 {
     font-family: 'Roboto Mono', monospace;
 }
 
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 90px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 90px;
+}
+
 .logo {
     width: 90px;
 }
@@ -78,8 +94,9 @@ h6 {
 /* styles the most outer container in the navigation bar */
 .container_head {
     background-color: #52d6d3;
-    padding-top: 1em;
+    padding-top: 1.5em;
     padding-bottom: 0.5em;
+    height: 91px;
 }
 
 /* this class styles the containers in the navigation bar */
