@@ -1,42 +1,39 @@
 <?php
-
+session_start();
 require_once('conn.php');
+$page = 'Oprettelse af legetøj';
+require_once('includes/header.php');
+
+
+print_r($_POST);
+
     
 /*husk at fjerne parrentes og tuborgklamme efter toytitle */
-     if (isset($_POST['product_name']) && isset($_POST['category_name']) && isset($_POST['description']) && isset($_POST['price']) && isset($_POST['product_condition'])) {
+     if (isset($_POST['product_name']) && isset($_POST['price']) && isset($_POST['description']) && isset($_POST['product_cat']) && isset($_POST['product_con'])) {
+         
+         
     $product_name = get_post($con, 'product_name');
-    $category_name = get_post($con, 'category_name');
     $description = get_post($con, 'description');
     $price = get_post($con, 'price');
-    $product_condition = get_post($con, 'product_condition');
-    
-    
+    $cat_id = get_post($con, 'product_cat');
+    $con_id = get_post($con, 'product_con');
+   
+
          
          
-         $query ="INSERT INTO product_cat(category_name)
-         VALUES('$category_name)";
-          $result = mysqli_query($con, $query);
-         if(!$result) die(mysqli_error($con)); 
+       
          
-            } 
-      /*       
-        $query2 ="INSERT INTO product_con(product_condition)
-         VALUES('$product_condition)";
-          $result = mysqli_query($con, $query2);
-         if(!$result) die(mysqli_error($con));      
-             */
-     /*        
-         $query3 ="INSERT INTO product(product_name, description, price, timestamp) VALUES('$product_name', '$description', '$price', NOW())";
-             $result = mysqli_query($con, $query3);
-         if(!$result) die(mysqli_error($con));
+         
+         $q_prod ="INSERT INTO product(product_name, description, price, cat_id, con_id, timestamp) VALUES('$product_name', '$description', '$price', '$cat_id', '$con_id', NOW())" ;
+             $r_prod = mysqli_query($con, $q_prod);
+         if(!$r_prod) die(mysqli_error($con));
          else {
              echo "Nu skal din mor eller far blot udfylde sine informationer";
-             */ 
-         
-     
+         }
+     }
 
 
-/*indsæt category_name ind i product_cat*/
+
 
 
 ?>
@@ -57,80 +54,105 @@ require_once('conn.php');
     <header class="toy_registration">
         <div class="container_registraion text-center">
             <div class="box-registration">
-                <h1>oprettelse af legetøj</h1>
+              <!--  <h1 class="col-12 col-md-11">Oprettelse af legetøj</h1> -->
 
             </div>
         </div>
 
+        
     </header>
-    <fieldset>
-        <legend>
-            <h2>Opret legetøj</h2>
-        </legend>
-        <form class="needs-validation" novalidate method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-            <div class="form-row">
-                <div class="col-md-6 mb-4">
-                    <label for="validationCustom01">Titel på legetøj</label>
-                    <input type="text" class="form-control" id="validationCustom01" placeholder="eks. lego super heros" name="toy_title" required>
+    <div class="container">
+        <fieldset>
+            <form class="needs-validation" novalidate method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
 
-                </div>
-                <br>
+                <div class="form-row">
+                    <div class="col-12 col-md-3"></div>
+                    <div class="col-md-8 col-12">
+                        <h2 class="col-12 col-md-8">Opret legetøj</h2>
+                        <div class="col-12 col-md-8 mb-4">
+                            <label for="validationCustom01">Titel på legetøj</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="eks. lego super heros" name="product_name" required>
 
-                <div class="col-md-6 mb-4">
-                    <label for="validationCustom03">Kategogi</label>
-                    <input type="text" class="form-action" id="validationCustom02" placeholder="eks. superhelte" name="category_name" required>
-
-
-                </div>
+                        </div>
+                        <br>
+                        <div class="col-md-8 mb-4">
+                            <label for="validationCustom01">Beskrivelse</label>
+                            <textarea type="textbox" rows="5" class="form-control" id="validationCustom02" placeholder="eks. superhelte i god stand.." name="description" required></textarea>
 
 
-                <div class="col-md6 mb-4">
+                        </div>
 
-                    <label for="validationCustom02">Beskrivelse</label>
-                    <!--<input type="text" class="form-action" id="validationCustom02" placeholder="legetøjet er næsten nyt og..." name="description" required>-->
-                    <textarea name="produkt_beskrivelse" cols="50" rows="5" placeholder="legetøjet er næsten nyt og..." required>
+                        <div class="col-md-8 mb-4">
+                            <label for="validationCustom01">Pris</label>
+                            <input type="number" class="form-control" id="validationCustom02" placeholder="100" name="price" required>
 
-                    </textarea>
+                        </div>
+
+                     <td class="col-md-8 mb-4">Kategorier</td> 
+                       <div class="col-md-8 mb-4"><select name="product_cat" class="custom-select">
+                                <option selected value="">Vælg en kategori</option>
+                                <?php 
+                        $query = "SELECT * from product_cat ORDER BY category_name";    
+                        $result = mysqli_query($con, $query);
+                        $rows = mysqli_num_rows($result);
+                            
+                                while($row1 = mysqli_fetch_assoc($result)) {
+                                    $cat_id = $row1['cat_id'];
+                                    $cat_name = $row1['category_name'];
+                                ?>
+                                <option value="<?php echo $cat_id;?>"><?php echo $cat_name;?>
+                                </option>
 
 
-                </div>
+                                <?php
+                                }
+                                ?>
+                            </select>
+
+                         
+                        </div>
+                        
+                     <td class="col-md-8 mb-4">Stand</td> 
+                       <div class="col-md-8 mb-4"><select name="product_con" class="custom-select">
+                                <option selected value="">Angiv standen på produktet</option>
+                                <?php 
+                        $query = "SELECT * from product_con ORDER BY product_condition";    
+                        $result = mysqli_query($con, $query);
+                        $rows = mysqli_num_rows($result);
+                            
+                                while($row1 = mysqli_fetch_assoc($result)) {
+                                    $con_id = $row1['con_id'];
+                                    $product_con = $row1['product_condition'];
+                                ?>
+                                <option value="<?php echo $con_id;?>"> <?php echo $product_con;?>
+                                </option>
 
 
-                <div class="col-md-6 mb-4">
-                    <label for="validationCustom04">Stand på legetøjet</label>
-                    <input type="product_condition" class="form-control" id="validationCustom02" placeholder="00" name="product_condition" required>
-                    <div class="invalid-feedback"> Angiv venligst standen på dit stykke legetøj. </div>
+                                <?php
+                                }
+                                ?>
+                            </select>
 
-                </div>
-                <div class="col-md-6 mb-4">
-                    <label for="validationCustomPasword">Pris</label>
-                    <div class="input-group">
-                        <input type="price" class="form-control" id="validationCustomPassword" placeholder="prisen på produktet" name="price" required>
-                        <div class="invalid-feedback"> Indtast venligst et brugernavn. </div>
+                         
+                        </div>
+                        
+                        
+        
+
                     </div>
                 </div>
+                <div class="col-md-2"></div>
+                <br>
 
-                <?php    
-                include 'upload.php';
-                    
-                    ?>
-                <!--<div class="col-md-6 mb-4">
-						<label for="validationCustomPasword">Billeder</label>
-						<div class="input-group">
-							<input type="image_link" class="form-control" id="validationCustomPassword" placeholder="********"  name="image_link" required>
-							<div class="invalid-feedback"> Indtast venligst et kodeord. </div>
-                            
-						</div>
-					</div>-->
-            </div>
+                <button class="btn btn-primary" type="submit">Upload</button>
+                <div class="invalid-feedback"> Tryk "Upload" for at udbyde legetøj. </div>
 
-            <button class="btn btn-primary" type="next">Upload</button>
-            <div class="invalid-feedback"> Tryk "Upload" for at udbyde legetøj. </div>
-            <botton onclick="window.location.href='/register_parrent.php'"></botton>
-        </form>
-        <br><br>
+            </form>
+            <br><br>
 
-    </fieldset>
+        </fieldset>
+    </div>
+
 </body>
 
 </html>
@@ -139,4 +161,7 @@ require_once('conn.php');
 function get_post($con, $var) {
 	return mysqli_real_escape_string($con, $_POST[$var]);
 }
+?>
+<?php
+require_once('includes/footer.php');
 ?>

@@ -2,7 +2,7 @@
 
 
 session_start();
-require_once('../conn.php');
+require_once('conn.php');
 
 //print_r($_POST);
      if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['post_code'])){
