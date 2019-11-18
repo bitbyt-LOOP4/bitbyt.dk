@@ -16,7 +16,7 @@
             <div class="col-3 text-right text-light">
                 <a class="text-light" href="om_os.php">Om os</a>
                 <br>
-                <a class="text-light" href="*">Kontakt</a>
+                <a class="text-light" href="kontakt.php">Kontakt</a>
             </div>
         </nav>
     </div>
