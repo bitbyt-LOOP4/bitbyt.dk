@@ -1,3 +1,17 @@
+html,
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto Mono', monospace;
+}
+
 .logo {
     width: 90px;
 }
@@ -6,21 +20,60 @@
     background-color: #52d6d3;
 }
 
+.bg-footer {
+    background-color: #2cbab8;
+}
+
+.bg-bitbyt-secondary {
+    background-color: #302579;
+}
+
 .purple-bitbyt {
+    color: #302579 !important;
+}
+
+.bg-bitbyt-purple {
+    background-color: #302579;
+}
+
+.h .purple-bitbyt {
     color: #302579 !important;
 }
 
 .navbar {
     min-height: 80px;
+    font-family: 'Roboto Mono', monospace;
 }
 
+.btn-submit {
+    background-color: #302579;
+    border-color: black;
+}
 
 .btn-registrer {
-    color: white;
+    color: antiquewhite !important;
     border-radius: 50px;
     background-color: #302579;
+    border-color: black;
+    padding-left: 0.9em !important;
+    padding-right: 0.9em !important;
 }
 
+.btn-registrer:hover,
+.btn-registrer:active {
+    background-color: #271e62;
+}
+
+.btn-purple {
+    color: white;
+    background-color: #302579;
+    border-color: black;
+}
+
+.btn-purple:hover,
+.btn-purple:active {
+    background-color: #271e62;
+}
 
 /* styles the most outer container in the navigation bar */
 .container_head {
@@ -44,8 +97,8 @@
     font-size: 1.6rem;
     color: black;
     text-align: center;
+    font-family: 'Roboto Mono', monospace;
 }
-
 
 /* Styles the text under the icons */
 .icon_text {
@@ -54,29 +107,69 @@
     font-size: 0.7rem;
 }
 
-.avatar{
-    border-radius: 90%;
-    border: solid black;
+.navbar-toggler {
+    margin-top: 0.9rem;
 }
-.profil_brugernavn{
+
+.avatar {
+    border-radius: 90%;
+    width: 14rem;
+}
+
+.profil_brugernavn {
     font-size: 1.5rem;
     font-weight: bold;
-    
 }
-.under_profil{
+
+.under_profil {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: lightgrey;
+}
+
+.profil_variabler {
     font-size: 1.3rem;
     font-weight: bold;
-    border-left: solid grey;
-    border-right: solid grey; 
-    }
-.profil_variabler{
-    font-size: 1.3rem;
-    font-weight: bold;
-    
+
 }
-.profil_container{
+
+.profil_container {
     padding-top: 10%;
 }
-.dropdown_items{
-    border-bottom: solid black;
+
+
+.icon-footer {
+    color: white !important;
+    /* Fix til forskellige browsers */
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.icon-footer :hover {
+    color: black;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+.about_header {
+    text-decoration-line: underline solid white;
+}
+
+.about_jumbo {
+    text-align: right;
+}
+
+.navbar-default {
+    transition: 500ms ease;
+    background-color: #52d6d3;
+}
+
+.navbar-default.scrolled {
+    background: white;
 }

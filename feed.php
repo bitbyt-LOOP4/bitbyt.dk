@@ -1,7 +1,7 @@
 <?php
 include_once './includes/header.php';
-
-$con = mysqli_connect("localhost", "root", "Mikkelsen", "bitbyt");
+include_once 'conn.php';
+/* $con = mysqli_connect("localhost", "root", "Mikkelsen", "bitbyt"); */
 
 
 ?>
@@ -29,18 +29,8 @@ $con = mysqli_connect("localhost", "root", "Mikkelsen", "bitbyt");
 			$description = $row['description'];
 			$image_link = $row['image_link'];
 			$price = $row['price'];
-           /* echo "<br>";
-			echo "NAVN:";
-            echo $product_name;
-            echo "<br>";
-            echo "BESKRIVELSE:";
-            echo $description;
-            echo "<br>";
-            echo "BILLEDE LINK:";
-            echo $image_link;
-            echo "<br>";
-            echo "PRIS:";
-            echo $price; */
+            $ID = $row['product_id'];
+
             echo '<div class="col-md-4 col-lg-3">';
             echo '<div class="card mb-4 shadow-sm">';
             
@@ -51,11 +41,11 @@ $con = mysqli_connect("localhost", "root", "Mikkelsen", "bitbyt");
             echo ' "class="bd-placeholder-img card-img-top" width="100%" height="225" alt="test">';
             echo '<div class="card-body">';
             echo '<p class="card-text">';
-            echo "$description"; 
+            echo $description . " " . $ID;  
             echo '</p>';
             echo '<div class="d-flex justify-content-between align-items-center">';
             echo '<div class="btn-group">';
-            echo '<button type="button" class="btn btn-sm btn-outline-secondary " data-toggle="modal" data-target="#myModal">Se vare</button>';
+            echo '<button type="button" class="btn btn-sm btn-outline-secondary " data-toggle="modal" data-target="#myModal" data-id="test data id">Se vare</button>';
             echo '</div>';
             echo '<small class="text-muted">AUH-HUB</small>';
             echo '</div>';

@@ -46,16 +46,6 @@ require_once('conn.php');
 
 
 
-<!DOCTYPE html>
-<html lang="da">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
-</head>
-
-<body>
     <header class="toy_registration">
         <div class="container_registraion text-center">
             <div class="box-registration">

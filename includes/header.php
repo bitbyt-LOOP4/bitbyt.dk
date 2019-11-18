@@ -11,40 +11,68 @@
     <title>
         <?php echo $page;?>
     </title>
+    <!-- Link til jquery og js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- Link til Javascript -->
     <!-- Bootstrap CSS -------------------------------------------------->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="styles/style.css">
     <!-- Kilde til icon biblotek fra bootstrap 4 ------------------------>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <!-- Link til jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Link til Javascript -->
-    <script src="js/bootstrap.js"></script>
-    <link rel="stylesheet" href="styles/style.css">
+    <!-- Google fonts ----->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Mono&display=swap" rel="stylesheet">
 </head>
+
+<script type="text/javascript">
+    //<![CDATA[
+
+    window.onload = function() {
+
+        $(window).scroll(function() {
+            $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
+        });
+
+    }
+
+    //]]>
+
+</script>
 
 <body>
     <!--Jesper/ Det her er til top navigationen på computeren ------------------------------------------>
-    <div class=" d-none d-md-block">
-        <nav class="navbar navbar-expand-sm bg-bitbyt">
-            <!-- Brand/logo -->
-            <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-bitbyt navbar-default">
+        <div class="d-flex flex-grow-1">
+            <span class="w-100 d-lg-none d-block">
+                <!-- Centrerer logo på mobil --></span>
+            <a class="navbar-brand d-none d-lg-inline-block" href="./index.php">
                 <img src="images/logo_transparent1.png" alt="logo" class="logo">
             </a>
-
-        <!-- Links -->
-        <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link purple-bitbyt" href="#">Sådan virker det</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link purple-bitbyt" href="#">Log ind</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="btn btn-info btn-registrer" role="button">Registrer</a>
-            </li>
-        </ul>
+            <!-- Placerer logo i midten på små skærme -->
+            <a class="navbar-brand-two mx-auto d-lg-none d-inline-block" href="./index.php">
+                <img src="images/logo_transparent1.png" alt="logo" class="logo">
+            </a>
+            <div class="w-100 text-right">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+                <li class="nav-item">
+                    <a href="*" class="nav-link m-2 menu-item nav-active">Sådan virker det</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./login.php" class="nav-link m-2 menu-item">Log ind</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link m-2 menu-item btn btn-info btn-registrer">Registrer</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-    </div>
     <!-- Det her er til navigation på tablet og mobil -------------------------------------------------->
     <!-- Oliver Bootstrap er benyttet til det meste af designet, dernæst overskrevet af CSS -->
     <div class="container-fluid fixed-bottom d-md-none container_head">
@@ -84,5 +112,3 @@
             </div>
         </div>
     </div>
-
-
