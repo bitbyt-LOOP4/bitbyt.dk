@@ -136,6 +136,10 @@ h6 {
     padding-top: 10%;
 }
 
+.icon-navbar {
+    width: 4rem;
+    padding: 0;
+}
 
 .icon-footer {
     color: white !important;
@@ -172,16 +176,22 @@ h6 {
 .navbar-default.scrolled {
     background: white;
 }
-.icon_index{
+
+.icon-color {
+    color: #302579 !important;
+}
+
+.icon_index {
     width: 14rem;
     border-color: none;
 }
 
-.arrow{
+.arrow {
     width: 2rem;
     border-color: none;
 }
-.faq_box{
+
+.faq_box {
     background-color: whitesmoke;
     border-radius: 20%;
 }
