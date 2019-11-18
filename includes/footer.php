@@ -1,4 +1,4 @@
-<footer class="py-4 px-4 my-0 fixed-bottom d-none d-md-block bg-bitbyt-purple">
+<footer class="py-4 px-4 my-0 d-none d-md-block bg-bitbyt-purple">
     <div class="row">
         <div class="col-3 text-light pt-2 small">
             &copy; 2019 Bitbyt.dk
