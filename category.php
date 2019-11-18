@@ -10,14 +10,16 @@ require_once('conn.php');
                         $result = mysqli_query($con, $query);
                         $rows = mysqli_num_rows($result);
                             
-                                while($row1 = mysqli_fetch_array($result)):;
+                                while($row1 = mysqli_fetch_assoc($result)) {
+                                    $cat_id = $row1['cat_id'];
+                                    $cat_name = $row1['category_name'];
                                 ?>
-                                <option value="<?php echo $row1[0];?>"><?php echo $row1[1];?>
+                                <option value="<?php echo $cat_id;?>"><?php echo $cat_name;?>
                                 </option>
 
 
                                 <?php
-                                endwhile;
+                                }
                                 ?>
                             </select>
 
@@ -25,7 +27,7 @@ require_once('conn.php');
                         </div>
 <?php
 
-if isset($_POST['category_name'])) {
+if (isset($_POST['category_name'])) {
 $category_name = get_post($con, 'category_name');
     
     

@@ -1,3 +1,4 @@
+
 <footer class="footer py-4 px-4 my-0 d-none d-md-block bg-bitbyt-purple">
     <div class="row">
         <div class="col-3 text-light pt-2 small">
@@ -14,7 +15,7 @@
         <div class="col-3 text-right text-light">
             <a class="text-light small" href="om_os.php">Om os</a>
             <br>
-            <a class="text-light small" href="*">Kontakt</a>
+            <a class="text-light small" href="kontakt.php">Kontakt</a>
         </div>
     </div>
 </footer>
