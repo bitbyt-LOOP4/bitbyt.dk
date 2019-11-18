@@ -1,6 +1,5 @@
 <?php
 $page = 'Log ind';
-require_once('conn.php');
 require_once('includes/header.php');
 if(isset($_SESSION['user_id'])) {
     header('Location: loggedin_front.php');

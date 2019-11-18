@@ -182,16 +182,17 @@ h6 {
     color: #302579 !important;
 }
 
-.icon_index{
+.icon_index {
     width: 14rem;
     border-color: none;
 }
 
-.arrow{
+.arrow {
     width: 2rem;
     border-color: none;
 }
-.faq_box{
+
+.faq_box {
     background-color: whitesmoke;
     border-radius: 20%;
 }
