@@ -44,9 +44,13 @@ $user_id = $_SESSION['user_id'];
             echo '</p>';
             echo '<div class="d-flex justify-content-between align-items-center">';
             echo '<div class="btn-group">';
-            echo '<button type="button" class="btn btn-sm btn-outline-secondary " data-toggle="modal" data-target="#myModal" data-id="test data id">Se vare</button>';
+            echo '<button type="button" class="btn btn-sm btn-outline-secondary view_data" data-toggle="modal" data-target="#myModal" id="';
+            echo $row["product_id"];
+            echo '">Se vare</button>';
+            echo '<input type="button" name="view" value="view" id="11" class="btn btn-info btn-xs view_data" />';
             echo '</div>';
             echo '<small class="text-muted">AUH-HUB</small>';
+            
             echo '</div>';
             echo '</div>';
             echo '</div>';
@@ -83,6 +87,20 @@ $user_id = $_SESSION['user_id'];
             </div>
         </div>
 
+
+    <!-- Modal content-->
+    <div class="modal-content" id="dataModal">
+      <div class="modal-header">
+          <h4 class="modal-title text-left">Blandet LEGO</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalMain">
+          <img src="./images/lego.jpg" class="bd-placeholder-img card-img-top" width="100%" height="225" alt="Lego">
+        <p>#LEGO #Blandet #Farver #Kreativ</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-block">Anmod om byttehandel</button>
+      </div>
     </div>
 </div>
 
