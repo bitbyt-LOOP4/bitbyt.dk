@@ -3,15 +3,13 @@ $page = 'Oprettelse af legetøj';
 require_once('includes/header.php');
 
 
-    
-/*husk at fjerne parrentes og tuborgklamme efter toytitle */
      if (isset($_POST['product_name']) && isset($_POST['price']) && isset($_POST['description']) && isset($_POST['product_cat']) && isset($_POST['product_con']) && isset($_POST['image_name']) && isset($_FILES['image'])) {
          
     $image_name = $_POST['image_name'];
     $current_dir = getcwd();
     $upload_directory = "/images/uploads/";
     $errors = [];
-    $file_extensions = ['jpeg','jpg','png','JPEG','JPG','PNG']; // Declares all the approved file extensions
+    $file_extensions = ['jpeg','jpg','png','JPEG','JPG','PNG']; 
     $file_name = $_FILES['image']['name']; //Gets the original name of the file
     $file_size = $_FILES['image']['size']; //Gets the size of the file
     $file_tmp_name  = $_FILES['image']['tmp_name']; //Gets the temporary name assigned to the file while processing
@@ -105,7 +103,7 @@ require_once('includes/header.php');
         <br>
         
          <td>Kategorier</td>
-                        <select name="product_cat" class="custom-select">
+                        <select name="product_cat" class="form-control">
                                 <option selected value="">Vælg en kategori</option>
                                 <?php 
                         $query = "SELECT * from product_cat ORDER BY category_name";    
@@ -124,7 +122,7 @@ require_once('includes/header.php');
         <br>
         
         <td>Stand</td>
-                       <select name="product_con" class="custom-select">
+                       <select name="product_con" class="form-control">
                                 <option selected value="">Vælg en stand</option>
                                 <?php 
                         $query = "SELECT * from product_con ORDER BY product_condition";    
