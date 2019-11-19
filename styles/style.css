@@ -219,3 +219,6 @@ font-weight: bold;
 .p_faq{
     font-family: 'Open Sans', sans-serif;
 }
+.form-control{
+    width:80%;
+}
