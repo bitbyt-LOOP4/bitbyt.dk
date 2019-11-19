@@ -29,8 +29,9 @@ $user_id = $_SESSION['user_id'];
 			$image_link = $row['image_link'];
 			$price = $row['price'];
             $ID = $row['product_id'];
-
-            echo '<div class="col-md-4 col-lg-3">';
+            
+            echo '
+            <div class="col-md-4 col-lg-3">';
             echo '<div class="card mb-4 shadow-sm">';
             
             echo "<h4> $product_name </h4>";
@@ -54,7 +55,7 @@ $user_id = $_SESSION['user_id'];
             echo '</div>';
             echo '</div>';
             echo '</div>';
-            echo '</div>';
+            echo '</div>     ';
             
         }
     } 
