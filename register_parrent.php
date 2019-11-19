@@ -8,17 +8,25 @@ require_once('includes/header.php');
 //print_r($_POST);
      if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['post_code'])){
          
+
+         
     $first_name = get_post($con, 'first_name');
     $last_name = get_post($con, 'last_name');
     $email = get_post($con, 'email');
     $password = get_post($con, 'password');
     $postal_code = get_post($con, 'post_code');
     $kidID = $_SESSION['kidID'];
+<<<<<<< HEAD
+=======
+         
+    
+>>>>>>> oliver-upload
         
    
     $hash = password_hash('$password', PASSWORD_DEFAULT);
           
          
+<<<<<<< HEAD
          
          $query ="INSERT INTO parent(email, password, kid_id) VALUES('$email', '$hash', '$kidID')";
            $result = mysqli_query($con, $query);
@@ -26,6 +34,15 @@ require_once('includes/header.php');
          
          $parentID = $con->insert_id;
          
+=======
+     $query ="INSERT INTO parent(email, password, kid_id) VALUES('$email', '$hash', '$kidID')";
+     $result = mysqli_query($con, $query);
+
+     if(!$result) 
+         die(mysqli_error($con));
+         
+         $parentID = $con->insert_id;
+>>>>>>> oliver-upload
          
          $query ="INSERT INTO parent_info(first_name, last_name, postal_code, timestamp, parent_id) VALUES('$first_name', '$last_name', '$postal_code', NOW(), '$parentID')";
              $result = mysqli_query($con, $query);

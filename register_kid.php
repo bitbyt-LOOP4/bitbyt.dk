@@ -9,21 +9,30 @@ require_once('includes/header.php');
 
    print_r($_POST); 
 
-     if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['age'])){
-    $first_name = get_post($con, 'first_name');
-    $last_name = get_post($con, 'last_name');
-    $username = get_post($con, 'username');
-    $password = get_post($con, 'password');
-    $age = get_post($con, 'age');
+     if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['age'])) {
+        $first_name = get_post($con, 'first_name');
+        $last_name = get_post($con, 'last_name');
+        $username = get_post($con, 'username');
+        $password = get_post($con, 'password');
+        $age = get_post($con, 'age');
     
     
+<<<<<<< HEAD
          $hash = password_hash($password, PASSWORD_DEFAULT);
           
+=======
+        $hash = password_hash($password, PASSWORD_DEFAULT);
+         
+       /*  $q_kid2parent ="INSERT INTO parent(kid_id)
+         VALUES('$kid_id')";
+         $result = mysqli_query($con, $q_kid2parent);
+         if(!$result) die(mysqli_error($con)); */
+         
+>>>>>>> oliver-upload
          $query1 ="INSERT INTO kid(username, password)
          VALUES('$username', '$hash')";
-          $result = mysqli_query($con, $query1);
-         if(!$result) die(mysqli_error($con));
          
+<<<<<<< HEAD
          
          //kid_id er nu oprettes og det specifikke id hentes herefter ned i kid_info
          $kidID = $con->insert_id;
@@ -32,6 +41,25 @@ require_once('includes/header.php');
          $query ="INSERT INTO kid_info(first_name, last_name, age, timestamp, kid_id) VALUES('$first_name', '$last_name', '$age', NOW(), '$kidID')";
              $result = mysqli_query($con, $query);
          if(!$result) die(mysqli_error($con));
+=======
+         $result = mysqli_query($con, $query1);
+         
+         if(!$result) 
+             die(mysqli_error($con));
+         
+         // Kid created
+         $kidID = $con->insert_id;
+         $_SESSION['kidID'] = $kidID;
+         
+         
+    
+         
+         $query ="INSERT INTO kid_info(first_name, last_name, age, timestamp, kid_id) VALUES('$first_name', '$last_name', '$age', NOW(), '$kidID')";
+         
+         $result = mysqli_query($con, $query);
+         if(!$result)
+             die(mysqli_error($con));
+>>>>>>> oliver-upload
          else {
              //echo "Nu skal din mor eller far blot udfylde sine informationer";
              header("Location: register_parrent.php");
