@@ -13,15 +13,21 @@ require_once('includes/header.php');
     $email = get_post($con, 'email');
     $password = get_post($con, 'password');
     $postal_code = get_post($con, 'post_code');
+    $kidID = $_SESSION['kidID'];
+        
    
     $hash = password_hash('$password', PASSWORD_DEFAULT);
+          
          
-         $query ="INSERT INTO parent(email, password) VALUES('$email', '$hash')";
+         
+         $query ="INSERT INTO parent(email, password, kid_id) VALUES('$email', '$hash', '$kidID')";
            $result = mysqli_query($con, $query);
          if(!$result) die(mysqli_error($con));
          
+         $parentID = $con->insert_id;
          
-         $query ="INSERT INTO parent_info(first_name, last_name, postal_code, timestamp) VALUES('$first_name', '$last_name', '$postal_code', NOW())";
+         
+         $query ="INSERT INTO parent_info(first_name, last_name, postal_code, timestamp, parent_id) VALUES('$first_name', '$last_name', '$postal_code', NOW(), '$parentID')";
              $result = mysqli_query($con, $query);
          if(!$result) die(mysqli_error($con));
          else {

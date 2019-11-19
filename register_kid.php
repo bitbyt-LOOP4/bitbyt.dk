@@ -29,12 +29,17 @@ require_once('includes/header.php');
           $result = mysqli_query($con, $query1);
          if(!$result) die(mysqli_error($con));
          
-         $query ="INSERT INTO kid_info(first_name, last_name, age, timestamp) VALUES('$first_name', '$last_name', '$age', NOW())";
+         
+         //kid_id er nu oprettes og det specifikke id hentes herefter ned i kid_info
+         $kidID = $con->insert_id;
+         $_SESSION['kidID'] = $kidID;
+         
+         $query ="INSERT INTO kid_info(first_name, last_name, age, timestamp, kid_id) VALUES('$first_name', '$last_name', '$age', NOW(), '$kidID')";
              $result = mysqli_query($con, $query);
          if(!$result) die(mysqli_error($con));
          else {
              //echo "Nu skal din mor eller far blot udfylde sine informationer";
-             header("Location: register_parrent.php ");
+             header("Location: register_parrent.php");
          }
      }
 
