@@ -1,18 +1,13 @@
 <?php
-session_start();
-require_once('conn.php');
 $page = 'Oprettelse af profil';
-
 require_once('includes/header.php');
-
-
 ?>
 <?php
 
 //*$page = "kid Registration: bitbyt";
 
 
-    
+   print_r($_POST); 
 
      if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['age'])){
     $first_name = get_post($con, 'first_name');
@@ -21,7 +16,13 @@ require_once('includes/header.php');
     $password = get_post($con, 'password');
     $age = get_post($con, 'age');
     
+    
          $hash = password_hash($password, PASSWORD_DEFAULT);
+         
+       /*  $q_kid2parent ="INSERT INTO parent(kid_id)
+         VALUES('$kid_id')";
+         $result = mysqli_query($con, $q_kid2parent);
+         if(!$result) die(mysqli_error($con)); */
          
          $query1 ="INSERT INTO kid(username, password)
          VALUES('$username', '$hash')";
@@ -73,13 +74,13 @@ require_once('includes/header.php');
                         <input type="text" class="form-control" id="validationCustom02" placeholder="efternavn" name="last_name" required>
 
                     </div>
-                    
-                        <div class="col-md-12 mb-4">
-                            <label for="validationCustom02">Alder</label>
-                            <input type="text" class="form-control" id="validationCustom02" placeholder="00" name="age" required>
-                            <div class="invalid-feedback"> Indtast venligst din alder. </div>
-                        </div>
-                    
+
+                    <div class="col-md-12 mb-4">
+                        <label for="validationCustom02">Alder</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="00" name="age" required>
+                        <div class="invalid-feedback"> Indtast venligst din alder. </div>
+                    </div>
+
                     <div class="col-md-12 mb-4">
                         <label for="validationCustomPasword">Brugernavn</label>
                         <div class="input-group">
@@ -97,12 +98,12 @@ require_once('includes/header.php');
                         </div>
                     </div>
                 </div>
-                
-               <!--  <input type="button" value="Next" onclick="window.location.href='http://www.google.com';" />-->
-           <button class="btn btn-primary" type="submit">Næste</button>
-            
-                <div class="invalid-feedback"> Tryk "næste" for forældre registrering. </div> 
-               
+
+                <!--  <input type="button" value="Next" onclick="window.location.href='http://www.google.com';" />-->
+                <button class="btn btn-primary" type="submit">Næste</button>
+
+                <div class="invalid-feedback"> Tryk "næste" for forældre registrering. </div>
+
 
             </form>
 
