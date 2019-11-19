@@ -2,7 +2,7 @@
 $page = 'Log ind';
 require_once('includes/header.php');
 if(isset($_SESSION['user_id'])) {
-    header('Location: loggedin_front.php');
+    header('Location: feed.php');
 }
 if (isset($_COOKIE['login'])) {
 	$kid_username = $_COOKIE['login'];
@@ -34,7 +34,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
             }
             if ($token == $password) {
                 $_SESSION['user_id'] = $user_id;
-                header('Location: loggedin_front.php');
+                header('Location: feed.php');
             }
         }
     }
