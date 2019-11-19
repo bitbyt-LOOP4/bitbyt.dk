@@ -38,7 +38,7 @@ $user_id = $_SESSION['user_id'];
                     </p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary view_data"  id="<?php  echo $row['product_id']?>">Se vare</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary view_data" user="<?php  echo $user_id?>"  id="<?php  echo $row['product_id']?>">Se vare</button>
                                                                                                                                                     
                             </div>
                           <small class=" text-muted">AUH-HUB</small>
@@ -69,11 +69,12 @@ $user_id = $_SESSION['user_id'];
     $(document).ready(function() {
         console.log( "ready!" );                                                                          
         $('.view_data').click(function() {
+            var user_id = $(this).attr("user");
             var product_id = $(this).attr("id");
             $.ajax({
                 url: "popup.php",
                 method: "post",
-                data: {product_id: product_id},
+                data: {product_id: product_id, user_id: user_id},
                 success: function(data) {
                     $('#product_detail').html(data);
                     $('#dataModal').modal("show");
@@ -101,10 +102,6 @@ elseif (!isset($_SESSION['user_id'])) {
         <h1>Du har ikke adgang til denne side. Venligst log ind først.</h1>
     </div>
 </div>
-
-
-
-
 
 
 
