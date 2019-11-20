@@ -1,9 +1,5 @@
 <?php 
 
-            
-          if(isset($_POST['btn-submit'])){     
-                echo "submit";  
-             }
           
 
 
@@ -71,7 +67,7 @@ if(isset($_POST["product_id"]))
                 
                 
                 
-                <button class="btn btn-primary .btn" name="btn-submit" type="submit">Anmod om byttehandel</button>
+                <button class="btn btn-primary .btn" name="submit" type="submit" data-dismiss="modal">Anmod om byttehandel</button>
         
 
                 
@@ -96,6 +92,9 @@ if(isset($_POST["product_id"]))
 
  }
 
+ function get_post($con, $var) {
+    return mysqli_real_escape_string($con, $_POST[$var]);
+} 
 
 
  ?>

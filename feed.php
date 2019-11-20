@@ -113,6 +113,11 @@ elseif (!isset($_SESSION['user_id'])) {
 
 
 <?php
+ function get_post($con, $var) {
+    return mysqli_real_escape_string($con, $_POST[$var]);
+}   
+    
+    
 }
 require_once('includes/footer.php');
 ?>
