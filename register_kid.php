@@ -125,7 +125,6 @@ require_once('includes/header.php');
 
 
 <?php
-
 function get_post($con, $var) {
 	return mysqli_real_escape_string($con, $_POST[$var]);
 }

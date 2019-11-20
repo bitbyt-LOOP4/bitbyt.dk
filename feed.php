@@ -5,6 +5,11 @@ if (isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
 ?>
 
+<header class="container p-5">
+    <h1 class="display-4">Hvad vil du bytte med?</h1>
+
+</header>
+
 <!-- container der indeholder artikler -->
 <div class="container">
     <div class="row">
@@ -25,14 +30,14 @@ $user_id = $_SESSION['user_id'];
 			$price = $row['price'];
             $product_id = $row['product_id'];
 ?>
-        <div class="col-md-4 col-lg-3">
-            <div class="card mb-4 shadow-sm">
+        <div class="col-md-4 col-lg-3 feed-card pb-4">
+            <div class="card mb-4 shadow-sm h-100">
 
-                <h4> <?php echo $product_name?> </h4>
+                <h4 class="m-2 text-truncate"> <?php echo $product_name?> </h4>
 
                 <img src="<?php echo $image_link;?> " class="bd-placeholder-img card-img-top" width="100%" height="225" alt="test">
                 <div class="card-body">
-                    <p class="card-text">
+                    <p class="card-text text-truncate">
                         <?php echo $description ?>
 
                     </p>
@@ -42,7 +47,7 @@ $user_id = $_SESSION['user_id'];
                             <button type="button" class="btn btn-sm btn-outline-secondary view_data" user="<?php  echo $user_id?>"  id="<?php  echo $row['product_id']?>">Se vare</button>
                                                                                                                                                     
                             </div>
-                          <small class=" text-muted">AUH-HUB</small>
+                          <small class=" text-muted">Rørkjær Skole</small>
 
                     </div>
                 </div>
@@ -57,7 +62,9 @@ $user_id = $_SESSION['user_id'];
 
 
     </div>
-    <button type="submit" class=" align-self-end btn btn-primary btn-block" onClick="window.location.reload();">Indlæs flere..</button>
+    <div class="container pt-3 pb-5">
+    <button type="submit" class="align-self-end btn text-light bg-bitbyt-secondary btn-bredde" onClick="window.location.reload();">Indlæs flere..</button>
+    </div>
 </div>
 
 <div id="dataModal" class="modal fade">

@@ -1,8 +1,8 @@
-<?php
+<?php                                                                   //Jesper
 session_start();
 require_once('conn.php');
-/* Jesper/  Hvis brugeren er logget ind vises følgende nav-bar */
 if(isset($_SESSION['user_id'])) {
+    /* Jesper/ Variabel til at styre navbaren */
     $menu = '
            <!--Jesper/ Det her er til top navigationen på computeren når man er logget ind-------------->
     <nav class="navbar sticky-top navbar-light bg-bitbyt navbar-default d-none d-md-block">
@@ -16,6 +16,10 @@ if(isset($_SESSION['user_id'])) {
                 <li>
                     <a href="feed.php" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-home bottom_icons icon-color"></i><br>
                         Hjem</a>
+                </li>
+                <li>
+                    <a href="register_items.php" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-plus-circle bottom_icons icon-color"></i><br>
+                        Upload</a>
                 </li>
                 <li>
                     <a href="" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-search bottom_icons icon-color"></i><br>
@@ -39,7 +43,7 @@ if(isset($_SESSION['user_id'])) {
     <!-- Det her er til navigation på tablet og mobil -------------------------------------------------->
     <nav class="container-fluid fixed-bottom d-md-none container_head">
         <div class="row">
-            <div class="col-2 bottom_links text-center">
+            <div class="col-2 bottom_links text-center pt-4">
                 <a class="icon_text" href="feed.php">
                     <i class="fas fa-home bottom_icons"></i><br>
                     Hjem
@@ -47,26 +51,26 @@ if(isset($_SESSION['user_id'])) {
 
             </div>
 
-            <div class="col-2 bottom_links text-center">
+            <div class="col-2 bottom_links text-center pt-4">
                 <a class="icon_text" href="">
                     <i class="fas fa-search bottom_icons"></i><br>
                     Søg
                 </a>
             </div>
-            <div class="col-4 bottom_links" id="upload">
-                <a class="icon_text" href="register_toy">
-                    <i class="fas fa-plus-circle bottom_icons"></i><br>
+            <div class="col-4 bottom_links pt-3" id="upload">
+                <a class="icon_text" href="register_items.php">
+                    <i class="fas fa-plus-circle bottom_icons fa-4x"></i><br>
                     Upload
                 </a>
             </div>
-            <div class="col-2 bottom_links text-center">
+            <div class="col-2 bottom_links text-center pt-4">
                 <a class="icon_text" href="">
                     <i class="fas fa-comment-dots bottom_icons"></i><br>
                     Beskeder
                 </a>
             </div>
 
-            <div class="col-2 bottom_links text-center">
+            <div class="col-2 bottom_links text-center pt-4">
                 <a class="icon_text" href="profil.php">
                     <i class="fas fa-user bottom_icons"></i><br>
                     Profil
@@ -138,14 +142,11 @@ if(isset($_SESSION['user_id'])) {
 
 <!-- Script som er med til at få nav-bar til at skifte farve ved scroll --->
 <script type="text/javascript">
-    //<![CDATA[
     window.onload = function() {
         $(window).scroll(function() {
             $('nav').toggleClass('scrolled', $(this).scrollTop() > 50);
         });
     }
-    //]]>
-
 </script>
 
 <body>

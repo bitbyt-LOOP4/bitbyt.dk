@@ -41,23 +41,28 @@ body {
 }
 
 .bg-bitbyt-secondary {
-    background-color: #302579;
+    background-color: #683ba3;
+    border: none;
+}
+
+.bg-bitbyt-secondary:hover{
+    background-color: #271e62;
 }
 
 .bg-bitbyt-third {
-    background-color: yellow;
+    background-color: #52d691;
 }
 
 .purple-bitbyt {
-    color: #302579 !important;
+    color: #683ba3 !important;
 }
 
 .bg-bitbyt-purple {
-    background-color: #302579;
+    background-color: #683ba3;
 }
 
 .h .purple-bitbyt {
-    color: #302579 !important;
+    color: #683ba3 !important;
 }
 
 .navbar {
@@ -66,14 +71,14 @@ body {
 }
 
 .btn-submit {
-    background-color: #302579;
+    background-color: #683ba3;
     border-color: black;
 }
 
 .btn-registrer {
     color: white !important;
     border-radius: 50px;
-    background-color: #302579;
+    background-color: #683ba3;
     border-color: black;
     padding-left: 0.9em !important;
     padding-right: 0.9em !important;
@@ -86,8 +91,12 @@ body {
 
 .btn-purple {
     color: white;
-    background-color: #302579;
+    background-color: #683ba3;
     border-color: black;
+}
+ 
+.btn-login {
+    width: 60%;
 }
 
 .btn-purple:hover,
@@ -98,8 +107,6 @@ body {
 /* styles the most outer container in the navigation bar */
 .container_head {
     background-color: #52d6d3;
-    padding-top: 1.5em;
-    padding-bottom: 0.5em;
     height: 91px;
 }
 
@@ -195,8 +202,16 @@ body {
     background-color: #52d6d3;
 }
 
+.feed-card {
+    height: 406px;
+}
+
 .navbar-default.scrolled {
     background: white;
+}
+
+.velkommen {
+    min-height: 45vh;
 }
 
 .icon-color {
@@ -213,13 +228,17 @@ body {
     border-color: none;
 }
 
+
 .faq_box {
     background-color: whitesmoke;
-    border-radius: 20%;
+    border-radius: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .head_faq {
     font-weight: bold;
+    font-size: 1.4em;
 }
 
 .p_faq {
@@ -228,4 +247,12 @@ body {
 
 .form-control{
     width:80%;
+}
+
+.bd-placeholder-img {
+    object-fit: cover;
+}
+.btn-bredde {
+    width: 30%;
+    margin-left: 35%;
 }

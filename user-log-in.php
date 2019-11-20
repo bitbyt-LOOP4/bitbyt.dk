@@ -1,5 +1,5 @@
 <?php
-$page = 'Log ind';
+$page = 'Log ind';                                          // Jesper
 require_once('includes/header.php');
 if(isset($_SESSION['user_id'])) {
     header('Location: feed.php');
@@ -51,9 +51,8 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
 
 
 <div class="container col-12 col-sm-6 col-md-5 col-lg-4 col-xl-4">
-    <form class="form-signin" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-        <br><br><br>
-        <h1 class="h3 mb-3 font-weight-normal">Log ind</h1>
+    <form class="form-signin container" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+        <h1 class="h3 my-3 pt-5 font-weight-normal">Log ind</h1>
         <label for="inputUsername" class="sr-only">Username</label>
         <input type="username" name="username" id="inputUsername" class="form-control mb-2" placeholder="Brugernavn" value="<?php echo $kid_username; ?>" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
@@ -62,7 +61,7 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
             <label>
                 <input type="checkbox" value="remember" name="remember"> Husk mig </label>
         </div>
-        <button class="btn-submit btn btn-lg btn-primary btn-block" type="submit">Log ind</button>
+        <button class="btn-submit btn btn-md btn-primary btn-login" type="submit">Log ind</button>
     </form>
 </div>
 
