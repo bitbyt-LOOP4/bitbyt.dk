@@ -7,12 +7,9 @@ if(isset($_SESSION['user_id'])) {
 ?>
 
 <div class="velkommen bg-bitbyt">
-    <div class="container p-5 row">
-        <div class="col-8">
-        <h1 class="display-5 text-light">Velkommen til børnenes bytteportal</h1>
-        <h1 class="display-5 purple-bitbyt">Hvor alle dine ting kan byttes</h1>
-        </div>
-        <div class="col-4"></div>
+    <div class="container-fluid pt-5 pl-5 ml-5">
+        <h1 class="display-5 text-light">Velkommen til børnenes <br> bytteportal</h1><br>
+        <h1 class="display-5 purple-bitbyt">Hvor alle dine ting kan <br> byttes</h1>
     </div>
 </div>
 <!-- Alle ikoner er hentet med frie rettigheder fra flaticon.com igennem subscription ------------->
