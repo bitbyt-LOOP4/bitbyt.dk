@@ -36,11 +36,16 @@ body {
     background-color: #52d6d3;
 }
 
-.bg-footer{
+.bg-footer {
     background-color: #2cbab8;
 }
+
 .bg-bitbyt-secondary {
     background-color: #302579;
+}
+
+.bg-bitbyt-third {
+    background-color: yellow;
 }
 
 .purple-bitbyt {
@@ -66,7 +71,7 @@ body {
 }
 
 .btn-registrer {
-    color: antiquewhite !important;
+    color: white !important;
     border-radius: 50px;
     background-color: #302579;
     border-color: black;
@@ -212,13 +217,15 @@ body {
     background-color: whitesmoke;
     border-radius: 20%;
 }
-.head_faq{
-font-weight: bold;
+
+.head_faq {
+    font-weight: bold;
 }
 
-.p_faq{
+.p_faq {
     font-family: 'Open Sans', sans-serif;
 }
+
 .form-control{
     width:80%;
 }

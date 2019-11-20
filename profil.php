@@ -1,6 +1,8 @@
 <?php 
 $page='Min profil';
 require_once('includes/header.php');
+if (isset($_SESSION['user_id'])) {
+$user_id = $_SESSION['user_id'];
 ?>
 
 
@@ -14,7 +16,20 @@ require_once('includes/header.php');
                 <img class="avatar" src="images/ninja.svg">
                 <!-- Icons made by Freepik from www.flaticon.com -->
                 <!-- Brugernavn hentes via PHP -->
-                <h2 class="profil_brugernavn mt-3">"Brugernavn"</h2>
+                <h2 class="profil_brugernavn mt-3">
+
+                    <?php 
+    
+                        $query = "SELECT `username` FROM `kid` WHERE `user_id` = '$user_id'"; 
+                        $result = mysqli_query($con, $query);
+                        if (!$result) die(mysqli_error($con));
+                            else 
+                                $row = mysqli_fetch_assoc($result);
+                                $username = $row['username'];
+                            echo $username;
+                    ?>
+
+                </h2>
 
                 <div class="list-group text-right">
 
@@ -127,4 +142,23 @@ require_once('includes/header.php');
 
 <?php 
 require_once('includes/footer.php');
+?>
+
+
+<?php
+die();
+}
+/* Hvis ikke brugeren er logget ind vil siden ikke være tilgængelig */
+elseif (!isset($_SESSION['user_id'])) {
+	?>
+<div class="container pt-5">
+    <div class=jumbotron>
+        <h1>Du har ikke adgang til denne side. Venligst log ind først.</h1>
+    </div>
+</div>
+
+<?php
+}
+require_once('includes/footer.php');
+die();
 ?>

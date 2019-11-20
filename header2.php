@@ -38,7 +38,7 @@
 </script>
 
 <body>
-    <!--Jesper/ Det her er til top navigationen på computeren når de ikke er logget ind-------------->
+    <!--Jesper/ Det her er til top navigationen på computeren når man er logget ind-------------->
     <nav class="navbar sticky-top navbar-light bg-bitbyt navbar-default d-none d-md-block">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -72,7 +72,7 @@
     </nav>
     <!-- Det her er til navigation på tablet og mobil -------------------------------------------------->
     <!-- Oliver Bootstrap er benyttet til det meste af designet, dernæst overskrevet af CSS -->
-    <div class="container-fluid fixed-bottom d-md-none container_head">
+    <nav class="container-fluid fixed-bottom d-md-none container_head">
         <div class="row">
             <div class="col-2 bottom_links text-center">
                 <a class="icon_text" href="*">
@@ -108,4 +108,4 @@
                 </a>
             </div>
         </div>
-    </div>
+    </nav>

@@ -14,7 +14,7 @@ if(isset($_SESSION['user_id'])) {
             </div>
             <ul class="nav navbar-right">
                 <li>
-                    <a href="index.php" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-home bottom_icons icon-color"></i><br>
+                    <a href="feed.php" class="nav-link my-2 icon-navbar icon_text"><i class="fas fa-home bottom_icons icon-color"></i><br>
                         Hjem</a>
                 </li>
                 <li>
@@ -40,7 +40,7 @@ if(isset($_SESSION['user_id'])) {
     <nav class="container-fluid fixed-bottom d-md-none container_head">
         <div class="row">
             <div class="col-2 bottom_links text-center">
-                <a class="icon_text" href="*">
+                <a class="icon_text" href="feed.php">
                     <i class="fas fa-home bottom_icons"></i><br>
                     Hjem
                 </a>
@@ -48,19 +48,19 @@ if(isset($_SESSION['user_id'])) {
             </div>
 
             <div class="col-2 bottom_links text-center">
-                <a class="icon_text" href="*">
+                <a class="icon_text" href="">
                     <i class="fas fa-search bottom_icons"></i><br>
                     Søg
                 </a>
             </div>
             <div class="col-4 bottom_links" id="upload">
-                <a class="icon_text" href="*">
+                <a class="icon_text" href="register_toy">
                     <i class="fas fa-plus-circle bottom_icons"></i><br>
                     Upload
                 </a>
             </div>
             <div class="col-2 bottom_links text-center">
-                <a class="icon_text" href="*">
+                <a class="icon_text" href="">
                     <i class="fas fa-comment-dots bottom_icons"></i><br>
                     Beskeder
                 </a>
@@ -103,7 +103,7 @@ if(isset($_SESSION['user_id'])) {
                     <a href="./user-log-in.php" class="nav-link m-2 menu-item">Log ind</a>
                 </li>
                 <li class="nav-item">
-                    <a href="register_kid.php" class="nav-link m-2 menu-item btn btn-info btn-registrer">Registrer</a>
+                    <a href="register_kid.php" class="nav-link m-2 menu-item btn btn-info btn-registrer">Opret nu!</a>
                 </li>
             </ul>
         </div>
