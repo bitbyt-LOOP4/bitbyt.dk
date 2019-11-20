@@ -56,45 +56,39 @@ require_once('includes/header.php');
 </head>
 
 <body>
-    <header class="parrent_registration">
-        <div class="container_registraion text-center">
-            <div class="box-registration">
-                <h1>Bruger registrering</h1>
+    <header class="pt-3 text-center">
+        <h1>Bruger registrering</h1>
+    </header>
+    <div class="container pt-3">
+        <div class="row">
+            <div class="col-md-3">
 
             </div>
-        </div>
 
-    </header>
-    <div class="container">
-        <div class="row">
-        <div class="col-md-3">
+            <fieldset class="col-md-6">
 
-        </div>
+                <h2>Forældre registrering</h2>
 
-        <fieldset class="col-md-6">
+                <form class="needs-validation" novalidate method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+                    <div class="form-row">
+                        <div class="col-md-6 mb-4">
+                            <label for="validationCustom01">Fornavn</label>
+                            <input type="text" class="form-control" id="validationCustom01" placeholder="fornavn" name="first_name" required>
 
-            <h2>Forældre registrering</h2>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label for="validationCustom02">Efternavn</label>
+                            <input type="text" class="form-control" id="validationCustom02" placeholder="efternavn" name="last_name" required>
 
-            <form class="needs-validation" novalidate method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-                <div class="form-row">
-                    <div class="col-md-6 mb-4">
-                        <label for="validationCustom01">Fornavn</label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="fornavn" name="first_name" required>
+                        </div>
 
-                    </div>
-                    <div class="col-md-6 mb-4">
-                        <label for="validationCustom02">Efternavn</label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="efternavn" name="last_name" required>
+                        <div class="col-md-12 mb-4">
+                            <label for="validationCustom04">Post nr.</label>
+                            <input type="phone" class="form-control" id="validationCustom04" placeholder="0000" name="post_code" required>
+                            <div class="invalid-feedback"> Indtast venligst dit post nr. </div>
+                        </div>
 
-                    </div>
-                    
-                    <div class="col-md-12 mb-4">
-                        <label for="validationCustom04">Post nr.</label>
-                        <input type="phone" class="form-control" id="validationCustom04" placeholder="0000" name="post_code" required>
-                        <div class="invalid-feedback"> Indtast venligst dit post nr. </div>
-                    </div>
-                
-                    
+
                         <div class="col-md-6 mb-4">
                             <label for="validationCustomEmail">E-Mail</label>
                             <div class="input-group">
@@ -110,24 +104,24 @@ require_once('includes/header.php');
                                 <div class="invalid-feedback"> Indtast venligst et kodeord. </div>
                             </div>
                         </div>
-                    
-                </div>
 
-                
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                        <label class="form-check-label" for="invalidCheck"> Accepter <a href="terms.php" target="_blank">terms and conditions</a></label>
-                        <div class="invalid-feedback"> Du skal acceptere vilkår og regler før oprettelse. </div>
                     </div>
-                </div>
-                <button class="btn btn-primary" type="submit">Registrer</button>
-            </form>
-            <br><br>
 
-        </fieldset>
-        <div class="d-none col-md-3"></div>
-</div>
+
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck"> Accepter <a href="terms.php" target="_blank">terms and conditions</a></label>
+                            <div class="invalid-feedback"> Du skal acceptere vilkår og regler før oprettelse. </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Registrer</button>
+                </form>
+                <br><br>
+
+            </fieldset>
+            <div class="d-none col-md-3"></div>
+        </div>
     </div>
 
 

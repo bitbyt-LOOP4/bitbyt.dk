@@ -70,42 +70,45 @@ require_once('includes/header.php');
 
 
 ?>
-<div class="jumbotron bg-bitbyt text-center">
-<fieldset>
-<form novalidate method="post" method="post" enctype="multipart/form-data">
-    
-        <h2>Opret opslag</h2>
-        <hr>
-    
-    <div class="row">
-   
-    <div class="col-12 col-md-6 text-left">
-     <input type="file" name="image" class="choose-file">
-        <br>
-        <br>
-    <input type="text" name="image_name" placeholder="Giv billedet et navn" class="image-name" required>
-    
-    
-    </div>
-    <div class="col-12 col-md-6 text-left">
-         <label for="validationCustom01">Titel</label>
-                            <input type="text" class="form-control" id="validationCustom01" placeholder="Giv dit opslag en titel" name="product_name" required>
-        <br>
-        
-         <label for="validationCustom01">Beskrivelse</label>
-                            <textarea type="textbox" rows="5" class="form-control" id="validationCustom02" placeholder="Giv dit opslag en beskrivelse" name="description" required></textarea>
-        
-        <br>
-        
-        <label for="validationCustom01">Pris</label>
-                            <input type="number" class="form-control" id="validationCustom02" placeholder="100" name="price" required>
-        
-        <br>
-        
-         <td>Kategorier</td>
-                        <select name="product_cat" class="form-control">
-                                <option selected value="">Vælg en kategori</option>
-                                <?php 
+
+
+<header class="text-center pt-3">
+
+    <h1>Opret opslag</h1>
+
+
+</header>
+<br>
+<br>
+
+<div class="container pt-3">
+    <fieldset>
+        <form novalidate method="post" method="post" enctype="multipart/form-data">
+
+
+            <div class="row">
+                
+
+                
+                <div class="col-12 col-md-6 text-left">
+                    <label for="validationCustom01">Titel</label>
+                    <input type="text" class="form-control" id="validationCustom01" placeholder="Giv dit opslag en titel" name="product_name" required>
+                    <br>
+
+                    <label for="validationCustom01">Beskrivelse</label>
+                    <textarea type="textbox" rows="5" class="form-control" id="validationCustom02" placeholder="Giv dit opslag en beskrivelse" name="description" required></textarea>
+
+                    <br>
+
+                    <label for="validationCustom01">Pris</label>
+                    <input type="number" class="form-control" id="validationCustom02" placeholder="100" name="price" required>
+
+                    <br>
+
+                    <td>Kategorier</td>
+                    <select name="product_cat" class="form-control">
+                        <option selected value="">Vælg en kategori</option>
+                        <?php 
                         $query = "SELECT * from product_cat ORDER BY category_name";    
                         $result = mysqli_query($con, $query);
                         $rows = mysqli_num_rows($result);
@@ -113,18 +116,18 @@ require_once('includes/header.php');
                                     $cat_id = $row1['cat_id'];
                                     $cat_name = $row1['category_name'];
                                 ?>
-                                <option value="<?php echo $cat_id;?>"><?php echo $cat_name;?>
-                                </option>
-                                <?php
+                        <option value="<?php echo $cat_id;?>"><?php echo $cat_name;?>
+                        </option>
+                        <?php
                                 }
                                 ?>
-                            </select>
-        <br>
-        
-        <td>Stand</td>
-                       <select name="product_con" class="form-control">
-                                <option selected value="">Vælg en stand</option>
-                                <?php 
+                    </select>
+                    <br>
+
+                    <td>Stand</td>
+                    <select name="product_con" class="form-control">
+                        <option selected value="">Vælg en stand</option>
+                        <?php 
                         $query = "SELECT * from product_con ORDER BY product_condition";    
                         $result = mysqli_query($con, $query);
                         $rows = mysqli_num_rows($result);                          
@@ -132,37 +135,42 @@ require_once('includes/header.php');
                                     $con_id = $row1['con_id'];
                                     $product_con = $row1['product_condition'];
                                 ?>
-                                <option value="<?php echo $con_id;?>"> <?php echo $product_con;?>
-                                </option>
-                                <?php
+                        <option value="<?php echo $con_id;?>"> <?php echo $product_con;?>
+                        </option>
+                        <?php
                                 }
                                 ?>
-                            </select>
-        <br>
-        
-        </div>
-          </div>
-    <br>
-       <div class="row">
- 
-           <div class="col-12 text-center">
-      <button class="btn btn-primary" name="submit" type="submit">Upload</button>
-    </div>
-    
-    </div>
-    
-    
-    
-    
-    
-   
+                    </select>
+                    <br>
 
-    
-</form>
+                </div>
+                <div class="col-12 col-md-6 text-left">
+                    <input type="file" name="image" class="choose-file">
+                    <br>
+                    <br>
+                    <input type="text" name="image_name" placeholder="Giv billedet et navn" class="image-name" required>
 
-</fieldset>
+
+                </div>
+                
+                
+            </div>
+            <br>
+            <div class="row">
+
+                <div class="col-12 text-center">
+                    <button class="btn btn-primary" name="submit" type="submit">Upload</button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </fieldset>
 
 </div>
+<br>
+<br>
 
 <?php 
 function get_post($con, $var) {

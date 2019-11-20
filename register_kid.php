@@ -7,7 +7,6 @@ require_once('includes/header.php');
 //*$page = "kid Registration: bitbyt";
 
 
-   print_r($_POST); 
 
      if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['age'])) {
         $first_name = get_post($con, 'first_name');
@@ -60,17 +59,10 @@ require_once('includes/header.php');
 
 
 ?>
-<header class="kid_registration">
-    <div class="container_registraion text-center">
-        <div class="box-registration">
+<header class="text-center pt-3">
             <h1>Bruger registrering</h1>
-
-        </div>
-    </div>
-
 </header>
-
-<div class="container">
+<div class="container pt-3">
     <div class="row">
         <div class="col-md-3">
 
@@ -83,25 +75,25 @@ require_once('includes/header.php');
                 <div class="form-row">
                     <div class="col-md-6 mb-4">
                         <label for="validationCustom01">Fornavn</label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="fornavn" name="first_name" required>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="Kim" name="first_name" required>
 
                     </div>
                     <div class="col-md-6 mb-4">
                         <label for="validationCustom02">Efternavn</label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="efternavn" name="last_name" required>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="Larsen" name="last_name" required>
 
                     </div>
 
                     <div class="col-md-12 mb-4">
                         <label for="validationCustom02">Alder</label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="00" name="age" required>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="12" name="age" required>
                         <div class="invalid-feedback"> Indtast venligst din alder. </div>
                     </div>
 
                     <div class="col-md-12 mb-4">
                         <label for="validationCustomPasword">Brugernavn</label>
                         <div class="input-group">
-                            <input type="username" class="form-control" id="validationCustomPassword" placeholder="brugernavn" aria-describedby="inputGroupPrepend" name="username" required>
+                            <input type="username" class="form-control" id="validationCustomPassword" placeholder="" aria-describedby="inputGroupPrepend" name="username" required>
                             <div class="invalid-feedback"> Indtast venligst et brugernavn. </div>
                         </div>
                     </div>
