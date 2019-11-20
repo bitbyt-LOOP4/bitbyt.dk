@@ -7,7 +7,7 @@ require_once('includes/header.php');
     <br>
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6 pb-5">
-            <form action="contactform.php" method="post">
+            <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
                 <div class="card rounded-0">
                     <div class="card-header p-0">
                         <div class="text-center bg-bitbyt py-2">
@@ -53,15 +53,17 @@ require_once('includes/header.php');
 </div>
 
 <?php
+if(isset($_POST['brugernavn'])){
 $brugernavn = $_POST['brugernavn'];
 $email = $_POST['email'];
 $besked = $_POST['besked'];
 $content="Fra: " . $brugernavn . "\n" . $besked;
 $modtager = "support@bitbyt.dk";
 $subject = "Besked fra bruger";
-$mailheader = "Fra: " . $email;
-mail($modtager, $subject, $content, $mailheader) or die("Error!");
+$header = "Fra: " . $email;
+mail($modtager, $subject, $content, $header) or die("Error!");
 echo "Din mail er nu sendt!";
+}
 ?>
 
 <?php 
