@@ -30,11 +30,19 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
             $user_id = $row['user_id'];
             $token = password_verify($password, $database_password);
             if ($token != $password) {
-					echo '<script>alert("Forkert brugernavn eller kodeord")</script>';
+                    echo '<script>alert("Forkert brugernavn eller kodeord")</script>';
             }
             if ($token == $password) {
                 $_SESSION['user_id'] = $user_id;
-                header('Location: feed.php');
+                if (isset($_POST['remember'])) {
+                    $cookie_name = 'login';
+                    $cookie_value = $kid_username;
+                    setcookie($cookie_name, $cookie_value, time() + (86400 * 7), "/"); // 86400 = 1 day
+                    header('Location: feed.php');
+                }
+                else {
+                    header('Location: feed.php');
+                }
             }
         }
     }
@@ -47,9 +55,9 @@ if(isset($_POST['username']) && isset($_POST['password'])) {
         <br><br><br>
         <h1 class="h3 mb-3 font-weight-normal">Log ind</h1>
         <label for="inputUsername" class="sr-only">Username</label>
-        <input type="username" name="username" id="inputUsername" class="form-control" placeholder="Brugernavn" value="<?php echo $kid_username; ?>" required autofocus>
+        <input type="username" name="username" id="inputUsername" class="form-control mb-2" placeholder="Brugernavn" value="<?php echo $kid_username; ?>" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <input type="password" name="password" id="inputPassword" class="form-control  mb-2" placeholder="Password" required>
         <div class="checkbox mb-3">
             <label>
                 <input type="checkbox" value="remember" name="remember"> Husk mig </label>

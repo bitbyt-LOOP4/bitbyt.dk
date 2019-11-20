@@ -103,7 +103,7 @@ if(isset($_SESSION['user_id'])) {
                     <a href="./user-log-in.php" class="nav-link m-2 menu-item">Log ind</a>
                 </li>
                 <li class="nav-item">
-                    <a href="register_kid.php" class="nav-link m-2 menu-item btn btn-info btn-registrer">Registrer</a>
+                    <a href="register_kid.php" class="nav-link m-2 menu-item btn btn-info btn-registrer">Opret nu!</a>
                 </li>
             </ul>
         </div>
