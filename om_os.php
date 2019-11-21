@@ -1,8 +1,9 @@
 <?php 
-$page='Min profil';
+$page='Om os';
 require_once('includes/header.php');
 ?>
 
+<!-- Oliver -->
 
 <div class="jumbotron jumbotron-fluid bg-bitbyt mb-0 mt-0">
     <div class="container">
@@ -37,22 +38,21 @@ require_once('includes/header.php');
 <div class="jumbotron jumbotron-fluid bg-bitbyt-purple mb-0 text-light">
     <div class="container">
         <h1 class="display-4 text-right">Fra idé til koncept</h1>
-        <p class="lead text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. In iaculis nunc sed augue. Nunc sed id semper risus in hendrerit gravida. Parturient montes nascetur ridiculus mus mauris. Phasellus faucibus scelerisque eleifend donec. In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Pellentesque elit eget gravida cum sociis. Consequat interdum varius sit amet. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Odio pellentesque diam volutpat commodo sed egestas. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Sit amet consectetur adipiscing elit. Adipiscing at in tellus integer. Magna fermentum iaculis eu non diam phasellus vestibulum.</p>
+        <p class="lead text-right">Idéen udsprang da vi opdagede at en stor mængde familier enten, solgte, gav væk, eller smed deres legetøj ud. Vi opdagede at alt ansvaret for afskaffelse lå hos forældrene, og dette tidsforbrug nogle gange resulterede i at de valgte at smide legetøjet ud, da det var nemmere. <br>Da vi kom længere i idéfasen, opdagede vi at det ikke kun var legetøj det omhandlede, men også tøj og pyntegenstande, generelt alt hvad børn voksede fra igennem tiden. Med Bitbyt kunne vi ændre denne adfærd, og give børnene en læring omkring miljøbevidsthed, og sammentidig give dem muligheden for at få noget for det!
+</p>
     </div>
 </div>
 
 <div class="jumbotron jumbotron-fluid bg-bitbyt mb-0">
     <div class="container">
         <h1 class="display-4">Mission</h1>
-        <p class="lead"> Non nisi est sit amet facilisis magna etiam tempor. Accumsan tortor posuere ac ut consequat semper. Mauris pellentesque pulvinar pellentesque habitant morbi tristique. Et ultrices neque ornare aenean euismod elementum nisi. Et tortor at risus viverra adipiscing at in tellus integer. Amet commodo nulla facilisi nullam vehicula ipsum a. Id leo in vitae turpis. Tempor orci eu lobortis elementum. Mi tempus imperdiet nulla malesuada pellentesque elit. Sed risus ultricies tristique nulla aliquet. Ultrices dui sapien eget mi proin. Et molestie ac feugiat sed. Pretium lectus quam id leo in vitae turpis. Tortor at risus viverra adipiscing at in tellus integer feugiat. Sed blandit libero volutpat sed cras. Integer vitae justo eget magna. Aliquet lectus proin nibh nisl condimentum id venenatis. Vulputate eu scelerisque felis imperdiet proin. Gravida neque convallis a cras semper auctor neque vitae tempus.</p>
+        <p class="lead"> Vores mission er at skabe en platform, der lærer børn om genanvendelighed og sammentidig giver dem noget for det. Muligheden for at komme af med noget af det gamle, og erstatte det med noget nyt og spændene. Sammentidig give børnene et element af selvstændighed, ved at de selv skal vurdere værdien af deres brugte ting, og finde frem til en fair byttehandel med andre børn. </p>
     </div>
 </div>
 <div class="jumbotron jumbotron-fluid bg-bitbyt-purple mb-0 text-light">
     <div class="container">
         <h1 class="display-4 text-right">Vision</h1>
-        <p class="lead text-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc sed id semper risus in hendrerit gravida rutrum quisque. Eu lobortis elementum nibh tellus molestie nunc non blandit massa. In iaculis nunc sed augue. Nunc sed id semper risus in hendrerit gravida. Parturient montes nascetur ridiculus mus mauris. Phasellus faucibus scelerisque eleifend donec. In arcu cursus euismod quis viverra nibh cras pulvinar mattis. Pellentesque elit eget gravida cum sociis. Consequat interdum varius sit amet. Sit amet luctus venenatis lectus magna fringilla urna porttitor. Odio pellentesque diam volutpat commodo sed egestas. Viverra nibh cras pulvinar mattis nunc sed blandit libero volutpat. Luctus venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Sit amet consectetur adipiscing elit. Adipiscing at in tellus integer. Magna fermentum iaculis eu non diam phasellus vestibulum.
-
-Non nisi est sit amet facilisis magna etiam tempor. Accumsan tortor posuere ac ut consequat semper. Mauris pellentesque pulvinar pellentesque habitant morbi tristique. Et ultrices neque ornare aenean euismod elementum nisi. Et tortor at risus viverra adipiscing at in tellus integer. Amet commodo nulla facilisi nullam vehicula ipsum a. Id leo in vitae turpis. Tempor orci eu lobortis elementum. Mi tempus imperdiet nulla malesuada pellentesque elit. Sed risus ultricies tristique nulla aliquet. Ultrices dui sapien eget mi proin. Et molestie ac feugiat sed. Pretium lectus quam id leo in vitae turpis. Tortor at risus viverra adipiscing at in tellus integer feugiat. Sed blandit libero volutpat sed cras. Integer vitae justo eget magna. Aliquet lectus proin nibh nisl condimentum id venenatis. Vulputate eu scelerisque felis imperdiet proin. Gravida neque convallis a cras semper auctor neque vitae tempus.</p>
+        <p class="lead text-right">Bitbyt’s vision er kort fortalt, at det eneste danske familier smider ud, er genstande som ikke virker mere, og ikke bare genstande der ikke er spændene mere. </p>
     </div>
 </div>
 

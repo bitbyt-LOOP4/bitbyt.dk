@@ -2,22 +2,22 @@
 $page = 'Oprettelse af legetøj';
 require_once('includes/header.php');
 
+//Asbjørn og Oliver
 
      if (isset($_POST['product_name']) && isset($_POST['price']) && isset($_POST['description']) && isset($_POST['product_cat']) && isset($_POST['product_con']) && isset($_POST['image_name']) && isset($_FILES['image'])) {
          
+    //Billed upload funktion fundet i Powerpoint fra undervisningen
     $image_name = $_POST['image_name'];
     $current_dir = getcwd();
     $upload_directory = "/images/uploads/";
     $errors = [];
     $file_extensions = ['jpeg','jpg','png','JPEG','JPG','PNG']; 
-    $file_name = $_FILES['image']['name']; //Gets the original name of the file
-    $file_size = $_FILES['image']['size']; //Gets the size of the file
-    $file_tmp_name  = $_FILES['image']['tmp_name']; //Gets the temporary name assigned to the file while processing
-    $file_type = $_FILES['image']['type']; //Gets the file type
+    $file_name = $_FILES['image']['name']; 
+    $file_size = $_FILES['image']['size']; 
+    $file_tmp_name  = $_FILES['image']['tmp_name']; 
+    $file_type = $_FILES['image']['type'];
 	$tmp = explode('.', $file_name);
 	$file_extension = end($tmp);
-	
-	//Sets the upload path from the current directory, adds a random number to the beginning of the filename of the returned filename from the specified pathto avoid duplicated names 
 	$upload_path = $current_dir . $upload_directory . rand(1, 1000) . basename($file_name); 
 	$target_file = $upload_directory . rand(1, 1000) . basename($file_name);
 	
@@ -89,6 +89,7 @@ require_once('includes/header.php');
 
                 <br>
 
+                <!-- DropDown -->
                 <td>Kategorier</td>
                 <select name="product_cat" class="form-control">
                     <option selected value="">Vælg en kategori</option>
@@ -108,6 +109,7 @@ require_once('includes/header.php');
                 </select>
                 <br>
 
+                <!-- DropDown -->
                 <td>Stand</td>
                 <select name="product_con" class="form-control">
                     <option selected value="">Vælg en stand</option>
@@ -126,13 +128,13 @@ require_once('includes/header.php');
                             ?>
                 </select>
                 <br>
-    
-        
+
+
 
 
             </div>
             <div class="col-12 col-md-6 text-left">
-                <input type="file" name="image" class="choose-file">
+                <input type="file" name="image">
                 <br>
                 <br>
                 <input type="text" name="image_name" placeholder="Giv billedet et navn" class="image-name" required>

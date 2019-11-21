@@ -2,6 +2,7 @@
 $page='bitbyt.dk';
 require_once('includes/header.php');
 ?>
+<!-- Oliver -->
 
 <div class="container">
     <br>
@@ -52,7 +53,7 @@ require_once('includes/header.php');
     </div>
 </div>
 
-<!-- This doesnt work as intended -->
+<!-- Af en eller anden grund virker dette ikke, kig på det senere -->
 
 <?php
 if(isset($_POST['brugernavn'])){
