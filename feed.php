@@ -1,3 +1,4 @@
+<!-- Simon -->
 <?php
 $page = 'bitbyt';
 require_once('includes/header.php');

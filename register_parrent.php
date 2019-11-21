@@ -3,7 +3,7 @@
 $page = 'Oprettelse af profil';
 require_once('includes/header.php');
 
-
+//Asbjørn
 
 //print_r($_POST);
      if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['post_code'])){
