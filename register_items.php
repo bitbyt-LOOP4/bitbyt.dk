@@ -72,7 +72,7 @@ require_once('includes/header.php');
 </header>
 
 <div class="container pt-3">
-<<<<<<< HEAD
+
     <form novalidate method="post" method="post" enctype="multipart/form-data">
         <div class="row">
             <div class="col-12 col-md-6 text-left">
@@ -126,10 +126,9 @@ require_once('includes/header.php');
                             ?>
                 </select>
                 <br>
-=======
-    <fieldset>
-        <form novalidate method="post" enctype="multipart/form-data">
->>>>>>> oliver-rettelser
+    
+        
+
 
             </div>
             <div class="col-12 col-md-6 text-left">
