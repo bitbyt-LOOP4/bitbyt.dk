@@ -15,7 +15,7 @@ if (!$result) die(mysqli_error($con));
         $number_prod = $row['antal'];
 
 // Variabel der går ind og tæller hvor mange byttehandler du har i databasen
-$trade_q = "SELECT COUNT(*) AS 'byttehandler' FROM transactions
+$trade_q = "SELECT COUNT(*) AS 'byttehandler' FROM         transactions
             WHERE kid2_id OR kid1_id = '$user_id'";
 $result = mysqli_query($con, $trade_q);
 if (!$result) die(mysqli_error($con));

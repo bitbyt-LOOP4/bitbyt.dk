@@ -115,7 +115,7 @@ die();
 /* Hvis ikke brugeren er logget ind vil siden ikke være tilgængelig */
 elseif (!isset($_SESSION['user_id'])) {
 	?>
-<div class="container pt-5">
+<div class="container py-5">
     <div class=jumbotron>
         <h1>Du har ikke adgang til denne side. Venligst log ind først.</h1>
     </div>
