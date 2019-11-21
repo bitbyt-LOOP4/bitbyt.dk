@@ -5,6 +5,7 @@ require_once('includes/header.php');
 
 <!-- Alle ikoner er hentet med frie rettigheder fra flaticon.com i gennem subscription -->
 
+
 <div class="jumbotron jumbotron-fluid bg-bitbyt mb-0 mt-0">
     <div class="container">
         <!-- Nr 1. -->
