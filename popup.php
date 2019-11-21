@@ -1,3 +1,5 @@
+<form method="post">
+
 <?php 
 
 
@@ -33,7 +35,7 @@
                 
                 
                 
-<div class="col-md-8 mb-4"><select name="product_cat" class="custom-select">
+<div class="col-md-8 mb-4"><select name="product_id_1" class="custom-select">
                                 <option selected value="">Vælg en vare du vil bytte</option>
                                 <?php 
                         $query = "SELECT * From product WHERE kid_id = '".$_POST["user_id"]."'";    
@@ -52,6 +54,8 @@
                                 }
                                 ?>
                             </select>
+                            <!-- Da popup.php er i en sepperat side fra feedet, skal vi gemme "Product_id" Derfor bruger vi et Hidden input, så vi kan bruge den på "Feed.php". -->
+                            <input type="hidden" name="product_id_2" value="<?php echo $product_id ?>" />
 
                          
                         </div>
@@ -64,14 +68,12 @@
                 
                 
         
-                <button type="button" class="btn btn-default btn-block">Anmod om byttehandel</button>
+                <button type="submit" name="submit" class="btn btn-default btn-block">Anmod om byttehandel</button>
             </div>
         </div>
           
         <?php  
       }  
  }
-
-
-
  ?>
+</form>

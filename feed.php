@@ -3,6 +3,16 @@ $page = 'bitbyt';
 require_once('includes/header.php');
 if (isset($_SESSION['user_id'])) {
 $user_id = $_SESSION['user_id'];
+    
+    
+    if (isset($_POST["submit"])) {
+        $product_id_1 = $_POST['product_id_1'];
+        $product_id_2 = $_POST['product_id_2'];
+        
+        $query = "INSERT INTO transactions(product1_id, product2_id) VALUES('$product_id_1', '$product_id_2')";
+        $result = mysqli_query($con, $query);
+	if (!$result) die(mysqli_error($con));
+    }
 ?>
 
 <!-- container der indeholder artikler -->

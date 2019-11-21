@@ -27,6 +27,7 @@ require_once('includes/header.php');
     $price = get_post($con, 'price');
     $cat_id = get_post($con, 'product_cat');
     $con_id = get_post($con, 'product_con');
+    $kid_id = $_SESSION['user_id'];
    
 
          
@@ -46,7 +47,7 @@ require_once('includes/header.php');
                 
             
         
-            $query = "INSERT INTO product(image_name, image_link, product_name, description, price, cat_id, con_id) VALUES('$image_name', '$image_path', '$product_name', '$description', '$price', '$cat_id', '$con_id')";
+            $query = "INSERT INTO product(image_name, image_link, product_name, description, price, cat_id, con_id, kid_id) VALUES('$image_name', '$image_path', '$product_name', '$description', '$price', '$cat_id', '$con_id', '$kid_id')";
             $result = mysqli_query($con, $query);
             if (!$result) die (mysqli_error($con));
             else {
@@ -83,7 +84,7 @@ require_once('includes/header.php');
 
 <div class="container pt-3">
     <fieldset>
-        <form novalidate method="post" method="post" enctype="multipart/form-data">
+        <form novalidate method="post" enctype="multipart/form-data">
 
 
             <div class="row">

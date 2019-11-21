@@ -15,6 +15,9 @@ require_once('includes/header.php');
     $email = get_post($con, 'email');
     $password = get_post($con, 'password');
     $postal_code = get_post($con, 'post_code');
+         
+   //Vi bruger vores Session til at hente det sidste ID der blev lavet.
+    //Dette er nødvendigt fordi at de to registreringer er sepperate
     $kidID = $_SESSION['kidID'];
    
     $hash = password_hash('$password', PASSWORD_DEFAULT);
@@ -27,6 +30,8 @@ require_once('includes/header.php');
 
      if(!$result) 
          die(mysqli_error($con));
+         
+     
          
          $parentID = $con->insert_id;
 

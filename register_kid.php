@@ -33,6 +33,7 @@ require_once('includes/header.php');
              die(mysqli_error($con));
          
          // Kid created
+         // Vi smidder den sidste lavede ID, ind i en session, så vi kan bruge den på den anden side
          $kidID = $con->insert_id;
          $_SESSION['kidID'] = $kidID;
          
