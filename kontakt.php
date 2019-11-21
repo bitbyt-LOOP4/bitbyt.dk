@@ -42,14 +42,14 @@ require_once('includes/header.php');
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" name="submit" class="btn-registrer">SEND MAIL</button>
+                            <button type="submit" name="submit" class="btn text-light btn-registrer">Send email</button>
                         </div>
                     </div>
 
                 </div>
             </form>
         </div>
- </div>
+    </div>
 </div>
 
 <!-- This doesnt work as intended -->
