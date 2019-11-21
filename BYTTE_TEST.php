@@ -68,6 +68,8 @@ $user_id = $_SESSION['user_id'];
             <div class="modal-dialog" id="product_detail">
             </div>
         </div>
+    </div>
+</div>
 
         <script>
             $(document).ready(function() {
