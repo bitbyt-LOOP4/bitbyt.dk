@@ -1,11 +1,11 @@
-<?php                                               //Jesper & Oliver & Simon
+<?php                                                                                     //Jesper & Oliver & Simon
 $page='bitbyt.dk';
 require_once('includes/header.php');
 if(isset($_SESSION['user_id'])) {
     header('Location: feed.php');
 }
 ?>
-
+<!-- Der er to velkommen, men kun den ene bliver vist. Er på grund af at margenerne skal være lidt forskellige på mobil og desktop -->
 <div class="velkommen bg-bitbyt">
     <div class="container-fluid d-none d-md-block pb-0 pt-5 pl-2">
         <h1 class="display-5 pl-4 text-light">Velkommen til børnenes <br> bytteportal</h1>
@@ -16,6 +16,7 @@ if(isset($_SESSION['user_id'])) {
         <h1 class="display-5 purple-bitbyt pb-4">Hvor alle dine ting kan byttes</h1>
     </div>
 </div>
+
 <!-- Alle ikoner er hentet med frie rettigheder fra flaticon.com igennem subscription ------------->
 <div class="jumbotron jumbotron-fluid bg-bitbyt-purple mb-0 text-light">
     <div class="container">
