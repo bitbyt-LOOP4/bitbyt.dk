@@ -52,6 +52,8 @@ require_once('includes/header.php');
  </div>
 </div>
 
+<!-- This doesnt work as intended -->
+
 <?php
 if(isset($_POST['brugernavn'])){
 $brugernavn = $_POST['brugernavn'];
