@@ -15,8 +15,11 @@ if (!$result) die(mysqli_error($con));
         $number_prod = $row['antal'];
 
 // Variabel der går ind og tæller hvor mange byttehandler du har i databasen
-$trade_q = "SELECT COUNT(*) AS 'byttehandler' FROM         transactions
-            WHERE kid2_id OR kid1_id = '$user_id'";
+$trade_q = "SELECT COUNT(*) AS 'byttehandler' FROM `Product` Tilbud
+            JOIN `Transactions` T ON Tilbud.product_id = T.product1_id
+            JOIN `Product` Offer ON Offer.product_id = T.product2_id
+        WHERE Offer.kid_id = '$user_id'";
+    
 $result = mysqli_query($con, $trade_q);
 if (!$result) die(mysqli_error($con));
 
@@ -57,7 +60,7 @@ if (!$result) die(mysqli_error($con));
                         <div class="dropdown-menu" aria-labelledby="dropdownMenu1">
                             <a class="dropdown-item dropdown_items" href="#!"><i class="fab fa-hubspot"></i> Mine Hubs</a>
                             <a class="dropdown-item dropdown_items" href="#!"><i class="fas fa-user-alt"></i> Skift Avatar</a>
-                            <a class="dropdown-item dropdown_items" href="#!"><i class="fas fa-history"></i> Historik</a>
+                            <a href="logout.php" class="dropdown-item dropdown_items"><i class="fas fa-sign-out-alt"></i> Log ud</a>
                         </div>
                     </div>
 
