@@ -93,6 +93,9 @@ if (!$result) die(mysqli_error($con));
     </div>
 </div>
 <br><br>
+<div class="container">
+    <h1 class="display-5 text-center">Dine varer</h1>
+</div>
 <!-- container der indeholder artikler -->
 <div class="container">
     <div class="row">
@@ -113,8 +116,9 @@ if (!$result) die(mysqli_error($con));
                     $image_link = $row['image_link'];
                     $price = $row['price'];
                     $product_id = $row['product_id'];
+                    $placeholder = '';
         ?>
-<div class="col-md-4 col-lg-3 feed-card pb-4">
+        <div class="col-md-4 col-lg-3 feed-card pb-4">
             <div class="card mb-4 shadow-sm h-100">
 
                 <h4 class="m-2 text-truncate"> <?php echo $product_name?> </h4>
@@ -128,10 +132,10 @@ if (!$result) die(mysqli_error($con));
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
 
-                            <button type="button" class="btn btn-sm btn-outline-secondary view_data" user="<?php  echo $user_id?>"  id="<?php  echo $row['product_id']?>">Se vare</button>
-                                                                                                                                                    
-                            </div>
-                          <small class=" text-muted">Rørkjær Skole</small>
+                            <button type="button" class="btn btn-sm btn-outline-secondary view_data" user="<?php  echo $user_id?>" id="<?php  echo $row['product_id']?>">Se vare</button>
+
+                        </div>
+                        <small class=" text-muted">Rørkjær Skole</small>
 
                     </div>
                 </div>
@@ -139,9 +143,17 @@ if (!$result) die(mysqli_error($con));
         </div>
         <?php 
         }
-    } 
-
+    }
+    else {
+        $placeholder = 'Der er ingen varer at vise';
     ?>
+        <div class="col-1 col-md-3"></div>
+        <div class="jumbotron text-muted text-center my-4 col-10 col-md-6">
+            <p> <?php echo $placeholder ?> </p>
+        </div>
+        <div class="col-1 col-md-3"></div>
+        <?php } ?>
+
 
         <div id="dataModal" class="modal fade">
             <div class="modal-dialog" id="product_detail">
@@ -171,23 +183,23 @@ if (!$result) die(mysqli_error($con));
     </div>
 </div>
 
-        <?php
+<?php
 require_once('includes/footer.php');
     ?>
 
 
 
-        <?php
+<?php
 die();
 }
 /* Hvis ikke brugeren er logget ind vil siden ikke være tilgængelig */
 elseif (!isset($_SESSION['user_id'])) {
 	?>
-        <div class="container pt-5">
-            <div class=jumbotron>
-                <h1>Du har ikke adgang til denne side. Venligst log ind først.</h1>
-            </div>
-        </div>
+<div class="container pt-5">
+    <div class=jumbotron>
+        <h1>Du har ikke adgang til denne side. Venligst log ind først.</h1>
+    </div>
+</div>
 
 
 
@@ -195,11 +207,11 @@ elseif (!isset($_SESSION['user_id'])) {
 
 
 
-        <?php
+<?php
 }
 require_once('includes/footer.php');
 ?>
 
-        <?php
+<?php
 die();
 ?>
