@@ -46,13 +46,13 @@ require_once('includes/header.php');
              die(mysqli_error($con));
 
          else {
-             //echo "Nu skal din mor eller far blot udfylde sine informationer";
+             
              header("Location: register_parrent.php");
          }
      }
 
 
-/*$query6 = "INSERT INTO parent SELECT * FROM kid_info WHERE ['kid_id' = kid_id]";*/
+
 
 
    
