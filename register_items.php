@@ -137,7 +137,7 @@ require_once('includes/header.php');
                 <br>
                 <input type="text" name="image_name" placeholder="Giv billedet et navn" class="image-name" required>
 
-
+ 
             </div>
 
 
@@ -155,6 +155,7 @@ require_once('includes/header.php');
 </div>
 <br>
 <br>
+
 
 <?php 
 function get_post($con, $var) {
