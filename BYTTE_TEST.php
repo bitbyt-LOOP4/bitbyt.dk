@@ -10,7 +10,7 @@ $user_id = $_SESSION['user_id'];
     <div class="row">
         <!-- LOOP der genere artikler -->
         <?php
-                   
+               // Går ind i databasen og henter produkter fra vedkommende som har anmodet om et byt    
               $query = "SELECT Tilbud.* FROM `Product` Tilbud
                             JOIN `Transactions` T ON Tilbud.product_id = T.product1_id
                             JOIN `Product` Offer ON Offer.product_id = T.product2_id
@@ -62,7 +62,6 @@ $user_id = $_SESSION['user_id'];
         <?php 
         }
     } 
-
     ?>
 
         <div id="dataModal" class="modal fade">
