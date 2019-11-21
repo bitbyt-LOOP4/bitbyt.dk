@@ -1,10 +1,10 @@
+<!--Asbjørn-->
 <?php
 $page = 'Oprettelse af profil';
 require_once('includes/header.php');
 ?>
 <?php
 
-//*$page = "kid Registration: bitbyt";
 
 
 
@@ -61,7 +61,7 @@ require_once('includes/header.php');
 
 ?>
 <header class="text-center pt-3">
-            <h1>Bruger registrering</h1>
+    <h1>Bruger registrering</h1>
 </header>
 <div class="container pt-3">
     <div class="row">
@@ -77,11 +77,14 @@ require_once('includes/header.php');
                     <div class="col-md-6 mb-4">
                         <label for="validationCustom01">Fornavn</label>
                         <input type="text" class="form-control" id="validationCustom01" placeholder="Kim" name="first_name" required>
+                        <div class="invalid-feedback"> Indtast venligst dit fornavn. </div>
+
 
                     </div>
                     <div class="col-md-6 mb-4">
                         <label for="validationCustom02">Efternavn</label>
                         <input type="text" class="form-control" id="validationCustom02" placeholder="Larsen" name="last_name" required>
+                        <div class="invalid-feedback"> Indtast venligst dit efternavn. </div>
 
                     </div>
 
@@ -109,7 +112,7 @@ require_once('includes/header.php');
                     </div>
                 </div>
 
-                <!--  <input type="button" value="Next" onclick="window.location.href='http://www.google.com';" />-->
+               
                 <button class="btn btn-primary" type="submit">Næste</button>
 
                 <div class="invalid-feedback"> Tryk "næste" for forældre registrering. </div>
@@ -123,6 +126,31 @@ require_once('includes/header.php');
         <div class="d-none col-md-3"></div>
     </div>
 </div>
+
+<script>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+
+            var forms = document.getElementsByClassName('needs-validation');
+
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+
+    select.onchange = function() {
+        input.value = select.value;
+    }
+
+</script>
 
 
 <?php
