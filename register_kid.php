@@ -18,12 +18,6 @@ require_once('includes/header.php');
     
         $hash = password_hash($password, PASSWORD_DEFAULT);
          
-       /*  $q_kid2parent ="INSERT INTO parent(kid_id)
-         VALUES('$kid_id')";
-         $result = mysqli_query($con, $q_kid2parent);
-         if(!$result) die(mysqli_error($con)); */
-         
-
          $query1 ="INSERT INTO kid(username, password)
          VALUES('$username', '$hash')";
          
