@@ -1,5 +1,4 @@
 <?php                                                                   //Jesper & Oliver
-
 require_once('conn.php');
 if(isset($_SESSION['user_id'])) {
     /* Jesper/ Variabel til at styre navbaren */

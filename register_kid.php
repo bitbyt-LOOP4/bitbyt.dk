@@ -1,13 +1,8 @@
-<!--Asbjørn-->
 <?php
 $page = 'Oprettelse af profil';
 require_once('includes/header.php');
 ?>
 <?php
-
-
-
-
      if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['first_name']) && isset($_POST['last_name']) && isset($_POST['age'])) {
         $first_name = get_post($con, 'first_name');
         $last_name = get_post($con, 'last_name');
@@ -45,20 +40,10 @@ require_once('includes/header.php');
          $result = mysqli_query($con, $query);
          if(!$result)
              die(mysqli_error($con));
-
          else {
-             
              header("Location: register_parrent.php");
          }
      }
-
-
-
-
-
-   
-
-
 ?>
 <header class="text-center pt-3">
     <h1>Bruger registrering</h1>
