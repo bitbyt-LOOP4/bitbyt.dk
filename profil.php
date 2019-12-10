@@ -15,9 +15,9 @@ if (!$result) die(mysqli_error($con));
         $number_prod = $row['antal'];
 
 // Variabel der går ind og tæller hvor mange byttehandler du har i databasen
-$trade_q = "SELECT COUNT(*) AS 'byttehandler' FROM `Product` Tilbud
-            JOIN `Transactions` T ON Tilbud.product_id = T.product1_id
-            JOIN `Product` Offer ON Offer.product_id = T.product2_id
+$trade_q = "SELECT COUNT(*) AS 'byttehandler' FROM `product` Tilbud
+            JOIN `transactions` T ON Tilbud.product_id = T.product1_id
+            JOIN `product` Offer ON Offer.product_id = T.product2_id
         WHERE Offer.kid_id = '$user_id'";
     
 $result = mysqli_query($con, $trade_q);
@@ -105,7 +105,7 @@ if (!$result) die(mysqli_error($con));
         <!-- LOOP der genere artikler -->
         <?php
                    
-              $query = "SELECT * FROM `Product`
+              $query = "SELECT * FROM `product`
                             WHERE kid_id = '$user_id'";
         
 	$result = mysqli_query($con, $query);

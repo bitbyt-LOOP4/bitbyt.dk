@@ -1,7 +1,4 @@
-<form method="post">
-    <!-- Simon -->
-
-    <?php 
+<?php 
 
 
  if(isset($_POST["product_id"]))  
@@ -19,6 +16,7 @@
 			$price = $row['price'];
             $product_id = $row['product_id'];
           ?>
+    <form method="post">
     <div class="modal-content">
         <div class="modal-header">
             <h4 class="modal-title text-left"><?php echo $product_name?></h4>
@@ -49,6 +47,7 @@
                                 }
                                 ?>
                 </select>
+                 <!--Simon-->
                 <!-- Da popup.php er i en sepperat side fra feedet, skal vi gemme "Product_id" Derfor bruger vi et Hidden input, så vi kan bruge den på "Feed.php". -->
                 <input type="hidden" name="product_id_2" value="<?php echo $product_id ?>" />
 

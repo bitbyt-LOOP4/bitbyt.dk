@@ -9,7 +9,7 @@ if(isset($_SESSION['user_id'])) {
 <div class="velkommen bg-bitbyt">
     <div class="container-fluid d-none d-md-block pb-0 pt-5 pl-2">
         <h1 class="display-5 pl-4 text-light">Velkommen til børnenes <br> bytteportal</h1>
-        <h1 class="display-5 purple-bitbyt pb-4 pl-4">Hvor alle dine ting kan <br> byttes</h1>
+        <h1 class="display-5 purple-bitbyt pb-4 pl-4 m-0">Hvor alle dine ting kan <br> byttes</h1>
     </div>
     <div class="container-fluid d-md-none pb-0 pt-5 pl-2">
         <h1 class="display-5 text-light">Velkommen til børnenes <br> bytteportal</h1>

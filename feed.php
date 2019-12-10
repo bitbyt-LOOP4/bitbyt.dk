@@ -1,4 +1,3 @@
-
 <?php
 $page = 'bitbyt';
 require_once('includes/header.php');
@@ -15,7 +14,7 @@ $user_id = $_SESSION['user_id'];
 	if (!$result) die(mysqli_error($con));
     }
 ?>
-
+<!-- Simon -->
 <!-- Feed som viser hvad andre tilbyder dig i bytte for en af dine ting ------->
 
 <!-- container der indeholder artikler -->
@@ -24,9 +23,9 @@ $user_id = $_SESSION['user_id'];
         <!-- LOOP der genere artikler -->
         <?php
                // Går ind i databasen og henter produkter fra vedkommende som har anmodet om et byt    
-              $query = "SELECT Tilbud.* FROM `Product` Tilbud
-                            JOIN `Transactions` T ON Tilbud.product_id = T.product1_id
-                            JOIN `Product` Offer ON Offer.product_id = T.product2_id
+              $query = "SELECT Tilbud.* FROM `product` Tilbud
+                            JOIN `transactions` T ON Tilbud.product_id = T.product1_id
+                            JOIN `product` Offer ON Offer.product_id = T.product2_id
                         WHERE Offer.kid_id = '$user_id'";
                      
     
@@ -63,7 +62,7 @@ $user_id = $_SESSION['user_id'];
 
                 <img src="<?php echo $image_link;?> " class="bd-placeholder-img card-img-top" width="100%" height="225" alt="test">
                 <div class="card-body">
-                    <p class="card-text">
+                    <p class="card-text text-truncate">
                         <?php echo $description ?>
 
                     </p>
