@@ -13,6 +13,13 @@ $user_id = $_SESSION['user_id'];
         $result = mysqli_query($con, $query);
 	if (!$result) die(mysqli_error($con));
     }
+    if (isset($_POST["godkendtsubmit"])) {
+        echo 'Godkendt';
+    }
+    
+    if (isset($_POST["afvissubmit"])) {
+        echo 'Afvist';
+    }
 ?>
 <!-- Simon -->
 <!-- Feed som viser hvad andre tilbyder dig i bytte for en af dine ting ------->
@@ -68,7 +75,7 @@ $user_id = $_SESSION['user_id'];
                     </p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-outline-secondary view_data" id="<?php  echo $row['product_id']?>">Se vare</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary view_trans" id="<?php  echo $row['product_id']?>">Se Anmodning</button>
 
                         </div>
                         <small class=" text-muted">Herning Spejderne</small>
@@ -83,8 +90,8 @@ $user_id = $_SESSION['user_id'];
     } 
     ?>
 
-        <div id="dataModal" class="modal fade">
-            <div class="modal-dialog" id="product_detail">
+        <div id="transModal" class="modal fade ">
+            <div class="modal-dialog modal-xl" id="trans_detail">
             </div>
         </div>
     </div>
@@ -93,17 +100,17 @@ $user_id = $_SESSION['user_id'];
 <script>
     $(document).ready(function() {
         console.log("ready!");
-        $('.view_data').click(function() {
+        $('.view_trans').click(function() {
             var product_id = $(this).attr("id");
             $.ajax({
-                url: "popup.php",
+                url: "transmodal.php",
                 method: "post",
                 data: {
                     product_id: product_id
                 },
                 success: function(data) {
-                    $('#product_detail').html(data);
-                    $('#dataModal').modal("show");
+                    $('#trans_detail').html(data);
+                    $('#transModal').modal("show");
                 }
             });
         });
