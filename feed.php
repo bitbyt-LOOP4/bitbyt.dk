@@ -24,10 +24,10 @@ $user_id = $_SESSION['user_id'];
 <!-- Simon -->
 <!-- Feed som viser hvad andre tilbyder dig i bytte for en af dine ting ------->
 
-<!-- container der indeholder artikler -->
+<!-- container der indeholder bytteanmodninger -->
 <div class="container">
     <div class="row">
-        <!-- LOOP der genere artikler -->
+        <!-- LOOP der genere bytteanmodninger -->
         <?php
                // Går ind i databasen og henter produkter fra vedkommende som har anmodet om et byt    
               $query = "SELECT Tilbud.* FROM `product` Tilbud
@@ -36,11 +36,6 @@ $user_id = $_SESSION['user_id'];
                         WHERE Offer.kid_id = '$user_id'";
                      
     
-                    /* Bruges hvis der sættes kid_id ind i transactions i databasen
-                    
-                    SELECT Tilbud.* FROM `Product` Tilbud
-                           JOIN `Transactions` T ON Tilbud.product_id = T.product1_id  
-                        WHERE T.kid2_id = '$user_id'  */
         
 	$result = mysqli_query($con, $query);
 	if (!$result) die(mysqli_error($con));
@@ -62,7 +57,7 @@ $user_id = $_SESSION['user_id'];
         <header class="container-fluid pb-5 pt-4 d-sm-none">
             <h1 class="display-6">Det tilbyder andre dig</h1>
         </header>
-        <div class="col-md-4 col-lg-3">
+        <div class="col-lg-3">
             <div class="card mb-4 shadow-sm">
 
                 <h4> <?php echo $product_name?> </h4>
